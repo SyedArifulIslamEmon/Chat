@@ -51,6 +51,7 @@ extension ChatViewController{
         tableViewChat.register(UINib(nibName: "OutgoingChatTableViewCell", bundle: nil), forCellReuseIdentifier: "outgoingChatTableViewCell")
         
         //sendMessageAPI()
+        pollingAPI()
         
     }
     
@@ -73,11 +74,11 @@ extension ChatViewController{
         ISMessages.hideAlert(animated: true)
         
         APIManager.shared.request(with: EndPoint.sendMessage(api_token: "43", timezone: /CurrentTime.shared.currentTime(), other_id: "45", chat_type: "1", message: /txtViewChat.text), completion: {[weak self] (response) in
-            self?.handleResponse(response: response)
+            self?.handleResponseSendMessageAPI(response: response)
         })
     }
     
-    func handleResponse(response : Response) {
+    func handleResponseSendMessageAPI(response : Response) {
         switch response{
             
         case .success(let responseValue):
@@ -101,6 +102,46 @@ extension ChatViewController{
             tableViewChat.delegate = dataSourceTableViewChat
             tableViewChat.dataSource = dataSourceTableViewChat
             tableViewChat.reloadData()
+            
+            
+        case .failure(let str):
+            Alerts.shared.show(alert: .oops, message: /str.rawValue, type: .error)
+        }
+    }
+    
+    
+    func pollingAPI(){
+        ISMessages.hideAlert(animated: true)
+        
+        APIManager.shared.request(with: EndPoint.polling(api_token: "45", other_id: "43", timezone: Keys.timezone.rV, id: "700"), completion: {[weak self] (response) in
+            self?.handleResponsePollingAPI(response: response)
+        })
+    }
+    
+    func handleResponsePollingAPI(response : Response) {
+        switch response{
+            
+        case .success(let responseValue):
+            
+            guard let polling = responseValue as? Polling else {fatalError()}
+            Alerts.shared.show(alert: .success, message: "success", type: .success)
+            
+//            guard  let itemCount = polling.dataPolling else {fatalError()}
+//            
+//            dataSourceTableViewChat =  TableViewDataSource(items: itemCount as Array<AnyObject>?, height: UITableViewAutomaticDimension, tableView: tableViewChat, cellIdentifier: "incomingChatTableViewCell", configureCellBlock: { (cell, item, indexPath) in
+//                //Cell for row at indexpath
+//                
+//                (cell as? IncomingChatTableViewCell)?.lblIncomingText.text = self.sentMessage[indexPath.row].trimmingCharacters(in: CharacterSet.whitespacesAndNewlines)
+//                (cell as? IncomingChatTableViewCell)?.lblIncomingTime.text = self.sentTime[indexPath.row]
+//                
+//            }, aRowSelectedListener: { (indexPath) in
+//                //DidSelectRow at index path
+//                
+//                
+//            }, DidScrollListener: nil)
+//            tableViewChat.delegate = dataSourceTableViewChat
+//            tableViewChat.dataSource = dataSourceTableViewChat
+//            tableViewChat.reloadData()
             
             
         case .failure(let str):

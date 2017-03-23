@@ -10,12 +10,12 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "BrewEstateChat/Everything/CommonFunction/Extension/ChatViewControllerExtension.swift"
-            timestampString = "511966493.826979"
+            timestampString = "511969105.267676"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "90"
-            endingLineNumber = "90"
-            landmarkName = "handleResponse(response:)"
+            startingLineNumber = "91"
+            endingLineNumber = "91"
+            landmarkName = "handleResponseSendMessageAPI(response:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -26,28 +26,12 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "BrewEstateChat/Everything/CommonFunction/Extension/ChatViewControllerExtension.swift"
-            timestampString = "511966493.826979"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "93"
-            endingLineNumber = "93"
-            landmarkName = "handleResponse(response:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "BrewEstateChat/Everything/CommonFunction/Extension/ChatViewControllerExtension.swift"
-            timestampString = "511966493.826979"
+            timestampString = "511969105.267676"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "94"
             endingLineNumber = "94"
-            landmarkName = "handleResponse(response:)"
+            landmarkName = "handleResponseSendMessageAPI(response:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -58,12 +42,12 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "BrewEstateChat/Everything/CommonFunction/Extension/ChatViewControllerExtension.swift"
-            timestampString = "511966493.826979"
+            timestampString = "511969105.267676"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "101"
-            endingLineNumber = "101"
-            landmarkName = "handleResponse(response:)"
+            startingLineNumber = "95"
+            endingLineNumber = "95"
+            landmarkName = "handleResponseSendMessageAPI(response:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -74,12 +58,12 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "BrewEstateChat/Everything/CommonFunction/Extension/ChatViewControllerExtension.swift"
-            timestampString = "511966473.403058"
+            timestampString = "511969105.267676"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "61"
-            endingLineNumber = "61"
-            landmarkName = "btnSendOperation()"
+            startingLineNumber = "102"
+            endingLineNumber = "102"
+            landmarkName = "handleResponseSendMessageAPI(response:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -90,12 +74,12 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "BrewEstateChat/Everything/CommonFunction/Extension/ChatViewControllerExtension.swift"
-            timestampString = "511966474.557349"
+            timestampString = "511969251.40308"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "63"
-            endingLineNumber = "63"
-            landmarkName = "btnSendOperation()"
+            startingLineNumber = "126"
+            endingLineNumber = "126"
+            landmarkName = "handleResponsePollingAPI(response:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -106,13 +90,45 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "BrewEstateChat/Everything/CommonFunction/Extension/ChatViewControllerExtension.swift"
-            timestampString = "511966609.035457"
+            timestampString = "511969253.374956"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "67"
-            endingLineNumber = "67"
-            landmarkName = "btnSendOperation()"
+            startingLineNumber = "127"
+            endingLineNumber = "127"
+            landmarkName = "handleResponsePollingAPI(response:)"
             landmarkType = "7">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "BrewEstateChat.ChatViewController.handleResponsePollingAPI (response : BrewEstateChat.Response) -&gt; ()"
+                  moduleName = "BrewEstateChat"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/sierra4/Documents/BrewEstateChat/BrewEstateChat/Everything/CommonFunction/Extension/ChatViewControllerExtension.swift"
+                  timestampString = "511969264.411953"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "127"
+                  endingLineNumber = "127"
+                  offsetFromSymbolStart = "301">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "BrewEstateChat.ChatViewController.handleResponsePollingAPI (response : BrewEstateChat.Response) -&gt; ()"
+                  moduleName = "BrewEstateChat"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/sierra4/Documents/BrewEstateChat/BrewEstateChat/Everything/CommonFunction/Extension/ChatViewControllerExtension.swift"
+                  timestampString = "511969264.413664"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "127"
+                  endingLineNumber = "127"
+                  offsetFromSymbolStart = "420">
+               </Location>
+            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>

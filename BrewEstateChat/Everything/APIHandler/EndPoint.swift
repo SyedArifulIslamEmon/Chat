@@ -16,7 +16,6 @@ enum EndPoint {
     case polling(api_token: String?, other_id: String?, timezone: String?, id: String?)
 }
 
-
 extension EndPoint : Router{
     
     var route : String  {
@@ -32,7 +31,6 @@ extension EndPoint : Router{
     var parameters: OptionalDictionary{
         return format()
     }
-    
     
     func format() -> OptionalDictionary {
         
@@ -59,5 +57,4 @@ extension EndPoint : Router{
     var baseURL: String{
         return APIConstants.basePath
     }
-    
 }
