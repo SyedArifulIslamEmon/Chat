@@ -90,7 +90,7 @@ class APIManager : UIViewController, NVActivityIndicatorViewable{
                 object = api.handle(parameters: json)
                 completion(Response.success(object))
                 
-            case .failure(let validation):
+            case .failure():
                 completion(Response.failure(.failure))
                 
             default : break

@@ -11,7 +11,7 @@
         <!--Chat View Controller-->
         <scene sceneID="MJD-my-Q0R">
             <objects>
-                <viewController storyboardIdentifier="ViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="H0W-px-ul9" customClass="ChatViewController" customModule="BrewEstateChat" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="ChatViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="H0W-px-ul9" customClass="ChatViewController" customModule="BrewEstateChat" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="9QE-1E-axi"/>
                         <viewControllerLayoutGuide type="bottom" id="8gR-V2-U0Y"/>
@@ -27,11 +27,17 @@
                                         <rect key="frame" x="276" y="20" width="24" height="20"/>
                                         <color key="tintColor" red="0.97287660840000001" green="0.81620937589999998" blue="0.2873212993" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <state key="normal" image="ic_more_vert"/>
+                                        <connections>
+                                            <action selector="btnOptionOperation:" destination="H0W-px-ul9" eventType="touchUpInside" id="up9-Km-I7v"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="h0l-GB-Nw5">
                                         <rect key="frame" x="20" y="20" width="24" height="20"/>
                                         <color key="tintColor" red="0.97287660840000001" green="0.81620937589999998" blue="0.2873212993" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <state key="normal" image="ic_arrow_back"/>
+                                        <connections>
+                                            <action selector="btnPop:" destination="H0W-px-ul9" eventType="touchUpInside" id="9Vd-Gc-IPC"/>
+                                        </connections>
                                     </button>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_add_a_photo" translatesAutoresizingMaskIntoConstraints="NO" id="Rcn-tn-jFf">
                                         <rect key="frame" x="52" y="10" width="52" height="40"/>
@@ -103,6 +109,9 @@
                                             <constraint firstAttribute="height" constant="50" id="UaR-Qg-v2Y"/>
                                         </constraints>
                                         <state key="normal" image="ic_send_white"/>
+                                        <connections>
+                                            <action selector="btnSendOperation:" destination="H0W-px-ul9" eventType="touchUpInside" id="bSd-Ho-TtW"/>
+                                        </connections>
                                     </button>
                                     <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFit" keyboardDismissMode="onDrag" textAlignment="justified" translatesAutoresizingMaskIntoConstraints="NO" id="UyI-Jl-yBY" customClass="ASJExpandableTextView">
                                         <rect key="frame" x="20" y="0.0" width="222" height="50"/>
@@ -122,6 +131,9 @@
                                             </userDefinedRuntimeAttribute>
                                             <userDefinedRuntimeAttribute type="string" keyPath="placeholder" value="Type message"/>
                                         </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <outlet property="delegate" destination="H0W-px-ul9" id="7Y8-05-Fh6"/>
+                                        </connections>
                                     </textView>
                                 </subviews>
                                 <color key="backgroundColor" red="0.92541211840000004" green="0.92554193740000001" blue="0.92537122959999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -152,6 +164,15 @@
                             <constraint firstItem="8gR-V2-U0Y" firstAttribute="top" secondItem="v60-Cy-CG2" secondAttribute="bottom" id="ziN-2y-dFL"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="btnSend" destination="cDk-Mh-WRf" id="YxG-Id-sJi"/>
+                        <outlet property="btnSendImage" destination="dNe-XW-d3B" id="aNu-7e-Pwk"/>
+                        <outlet property="imgProfilePicture" destination="Rcn-tn-jFf" id="H0o-nG-olX"/>
+                        <outlet property="lblUserName" destination="yAk-cN-EFg" id="X3z-ES-HcM"/>
+                        <outlet property="tableViewChat" destination="Evg-QE-ELC" id="YRV-k7-hdV"/>
+                        <outlet property="txtViewChat" destination="UyI-Jl-yBY" id="6yg-8g-kx6"/>
+                        <outlet property="viewOption" destination="EqR-ms-Csc" id="opd-NB-rzR"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cQC-36-RQb" sceneMemberID="firstResponder"/>
             </objects>
@@ -195,7 +216,6 @@
                     <navigationItem key="navigationItem" id="zHf-Tm-4ZU"/>
                     <connections>
                         <outlet property="tableViewDisplayUser" destination="lVj-2t-GLF" id="VWq-4b-Nni"/>
-                        <segue destination="H0W-px-ul9" kind="show" id="AWd-kZ-ncj"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="eJj-jm-83a" userLabel="First Responder" sceneMemberID="firstResponder"/>

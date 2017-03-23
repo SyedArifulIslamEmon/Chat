@@ -10,6 +10,13 @@ import Foundation
 import ISMessages
 
 extension DisplayUserViewController{
+    
+    func DisplayUserViewControllerViewDidLoadOperation(){
+        
+        tableViewDisplayUser.register(UINib(nibName: "DisplayUserTableViewCell", bundle: nil), forCellReuseIdentifier: "displayUserTableViewCell")
+        
+        messagesAPI()
+    }
 
     func messagesAPI(){
         ISMessages.hideAlert(animated: true)
@@ -42,15 +49,21 @@ extension DisplayUserViewController{
             }, aRowSelectedListener: { (indexPath) in
                 //DidSelectRow at index path
                 
+                Utility.functions.startAnimating(nil, message: nil, messageFont: nil, type: .lineScalePulseOutRapid, color: UIColor.white, padding: nil, displayTimeThreshold: nil, minimumDisplayTime: nil)
+                
+                guard let vc = ChatViewController.instantiate(fromStoryboard: "Main",id: "ChatViewController") else { return }
+                self.navigationController?.pushViewController(vc, animated: true)
+                
+                Utility.functions.stopAnimating()
+                
             }, DidScrollListener: nil)
             tableViewDisplayUser.delegate = dataSourceTableViewDisplayUser
             tableViewDisplayUser.dataSource = dataSourceTableViewDisplayUser
             tableViewDisplayUser.reloadData()
             
             
-        case .failure(let responseValue):
-            Alerts.shared.show(alert: .oops, message: "success", type: .error)
-            
+        case .failure(let str):
+            Alerts.shared.show(alert: .oops, message: /str.rawValue, type: .error)
         }
     }
 }

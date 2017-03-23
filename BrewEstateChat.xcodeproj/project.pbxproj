@@ -42,6 +42,8 @@
 		1D5AA1401E83A931007263F4 /* Utility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D5AA13F1E83A931007263F4 /* Utility.swift */; };
 		1D5AA1421E83A949007263F4 /* AlertBox.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D5AA1411E83A949007263F4 /* AlertBox.swift */; };
 		1D5AA1461E83CF8B007263F4 /* DisplayUserViewControllerExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D5AA1451E83CF8B007263F4 /* DisplayUserViewControllerExtension.swift */; };
+		1D5AA1481E83DD2B007263F4 /* ChatViewControllerExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D5AA1471E83DD2B007263F4 /* ChatViewControllerExtension.swift */; };
+		1D5AA14A1E83EFAB007263F4 /* CurrentTime.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D5AA1491E83EFAB007263F4 /* CurrentTime.swift */; };
 		D3B99A50A62D9D7FD24E1EBB /* Pods_BrewEstateChat.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F64B26A7A7504324DE3E6FF2 /* Pods_BrewEstateChat.framework */; };
 /* End PBXBuildFile section */
 
@@ -103,6 +105,8 @@
 		1D5AA13F1E83A931007263F4 /* Utility.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Utility.swift; sourceTree = "<group>"; };
 		1D5AA1411E83A949007263F4 /* AlertBox.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlertBox.swift; sourceTree = "<group>"; };
 		1D5AA1451E83CF8B007263F4 /* DisplayUserViewControllerExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DisplayUserViewControllerExtension.swift; sourceTree = "<group>"; };
+		1D5AA1471E83DD2B007263F4 /* ChatViewControllerExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChatViewControllerExtension.swift; sourceTree = "<group>"; };
+		1D5AA1491E83EFAB007263F4 /* CurrentTime.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CurrentTime.swift; sourceTree = "<group>"; };
 		9F0430B3F417889B16F992A7 /* Pods-BrewEstateChat.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BrewEstateChat.debug.xcconfig"; path = "Pods/Target Support Files/Pods-BrewEstateChat/Pods-BrewEstateChat.debug.xcconfig"; sourceTree = "<group>"; };
 		E4FCA4A71C86F9D6AA6144D3 /* Pods-BrewEstateChat.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BrewEstateChat.release.xcconfig"; path = "Pods/Target Support Files/Pods-BrewEstateChat/Pods-BrewEstateChat.release.xcconfig"; sourceTree = "<group>"; };
 		F64B26A7A7504324DE3E6FF2 /* Pods_BrewEstateChat.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BrewEstateChat.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -241,6 +245,7 @@
 			children = (
 				1D5441061E82C683004A21D2 /* Extension.swift */,
 				1D5AA1451E83CF8B007263F4 /* DisplayUserViewControllerExtension.swift */,
+				1D5AA1471E83DD2B007263F4 /* ChatViewControllerExtension.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -378,6 +383,7 @@
 			isa = PBXGroup;
 			children = (
 				1D5AA13F1E83A931007263F4 /* Utility.swift */,
+				1D5AA1491E83EFAB007263F4 /* CurrentTime.swift */,
 			);
 			path = Utility;
 			sourceTree = "<group>";
@@ -595,6 +601,7 @@
 				1D5441041E82B30E004A21D2 /* Constants.swift in Sources */,
 				1D5440EE1E82A91D004A21D2 /* Polling.swift in Sources */,
 				1D5440FB1E82ABB2004A21D2 /* APIRoutes.swift in Sources */,
+				1D5AA14A1E83EFAB007263F4 /* CurrentTime.swift in Sources */,
 				1D5440EF1E82A91D004A21D2 /* DataSendMessage.swift in Sources */,
 				1D5440FE1E82ABB2004A21D2 /* EndPoint.swift in Sources */,
 				1D5440E01E82A849004A21D2 /* OutgoingChatTableViewCell.swift in Sources */,
@@ -614,6 +621,7 @@
 				1D5AA1401E83A931007263F4 /* Utility.swift in Sources */,
 				1D5440CB1E82A635004A21D2 /* BrewEstateChat.xcdatamodeld in Sources */,
 				1D5440FD1E82ABB2004A21D2 /* HTTPClient.swift in Sources */,
+				1D5AA1481E83DD2B007263F4 /* ChatViewControllerExtension.swift in Sources */,
 				1D5440DC1E82A83A004A21D2 /* IncomingChatTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

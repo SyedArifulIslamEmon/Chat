@@ -8,25 +8,55 @@
 
 import UIKit
 
-class ChatViewController: UIViewController {
+class ChatViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
 
+    @IBOutlet var lblUserName: UILabel!
     
-    var dataSource = TableViewDataSource()
+    @IBOutlet var imgProfilePicture: UIImageView!
+    
+    @IBOutlet var viewOption: UIView!
+    
+    @IBOutlet var tableViewChat: UITableView!
+    
+    @IBOutlet var txtViewChat: UITextView!
+    
+    @IBOutlet var btnSend: UIButton!
+    @IBOutlet var btnSendImage: UIButton!
+    
+    var sendImage:[UIImage]?
+    var sendImageTemp:UIImage?
+    
+    var sentTime:[String] = []
+    var sentMessage:[String] = []
+    
+    var doubleTap:Bool = false
+    
+    var dataSourceTableViewChat = TableViewDataSource()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        chatViewControllerViewDidLoadOperation()
 
-//        dataSource = TableViewDataSource(items: <#T##Array<AnyObject>?#>, height: UITableViewAutomaticDimension, tableView: <#T##UITableView?#>, cellIdentifier: <#T##String?#>, configureCellBlock: { (cell, item, indexPath) in
-//        //Cell for row at indexpath
-//            
-//        }, aRowSelectedListener: { (indexPath) in
-//            //DidSelectRow at index path
-//            
-//            
-//        }, DidScrollListener: nil)
+//        dataSource 
+    }
+    
+    @IBAction func btnSendOperation(_ sender: Any) {
+        if(txtViewChat.text == "") {
+            //if text view is empty, no action is performed
+        }
+        else {
+            //function call for button send operation
+            btnSendOperation()
+        }
+    }
+    
+    @IBAction func btnOptionOperation(_ sender: Any) {
+        tapButton(doubleTap)
     }
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+    @IBAction func btnPop(_ sender: Any) {
+        //poping the stack
+        _ = self.navigationController?.popViewController(animated: true)
     }
 }

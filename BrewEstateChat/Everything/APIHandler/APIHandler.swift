@@ -9,16 +9,6 @@
 import Foundation
 import SwiftyJSON
 
-enum ResponseKeys : String {
-    case messages = "messages"
-    case sendMessage = "sendMessage"
-    case polling = "polling"
-    
-    var rV:String {
-        return self.rawValue
-    }
-}
-
 extension EndPoint {
     
     func handle(parameters : JSON) -> AnyObject? {
@@ -30,12 +20,12 @@ extension EndPoint {
             
         case .sendMessage(_):
             do {
-                return try SendMessage(attributes: parameters[ResponseKeys.messages.rV].dictionaryValue )
+                return try SendMessage(attributes: parameters.dictionaryValue )
             } catch _ { return nil }
             
         case .polling(_):
             do {
-                return try Polling(attributes: parameters[ResponseKeys.polling.rV].dictionaryValue )
+                return try Polling(attributes: parameters.dictionaryValue )
             } catch _ { return nil }
         }
     }

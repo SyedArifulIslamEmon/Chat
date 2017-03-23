@@ -10,6 +10,12 @@ import UIKit
 
 class IncomingChatTableViewCell: UITableViewCell {
 
+    //outlet for object
+    @IBOutlet var viewIncoming: UIView!
+    
+    @IBOutlet var lblIncomingText: UILabel!
+    @IBOutlet var lblIncomingTime: UILabel!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
@@ -19,6 +25,12 @@ class IncomingChatTableViewCell: UITableViewCell {
         super.setSelected(selected, animated: animated)
 
         // Configure the view for the selected state
+    }
+    
+    //autolayout function
+    override func draw(_ rect: CGRect) {
+        //function call for rounding corners
+        viewIncoming.roundCorners(corners: [.topRight, .bottomLeft, .bottomRight], radius: 20)
     }
     
 }

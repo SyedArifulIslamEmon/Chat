@@ -18,9 +18,7 @@ class DisplayUserViewController: UIViewController{
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        tableViewDisplayUser.register(UINib(nibName: "DisplayUserTableViewCell", bundle: nil), forCellReuseIdentifier: "displayUserTableViewCell")
-
-        messagesAPI()
+      
+        DisplayUserViewControllerViewDidLoadOperation()
     }
 }
