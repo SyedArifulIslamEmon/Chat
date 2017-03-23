@@ -1,0 +1,6 @@
+framework module Pods_BrewEstateChat {
+  umbrella header "Pods-BrewEstateChat-umbrella.h"
+
+  export *
+  module * { export * }
+}

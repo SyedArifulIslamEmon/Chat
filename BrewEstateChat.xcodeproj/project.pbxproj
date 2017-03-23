@@ -1,0 +1,902 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		1D54409B1E82A513004A21D2 /* BrewEstateChatTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D54409A1E82A513004A21D2 /* BrewEstateChatTests.swift */; };
+		1D5440A61E82A513004A21D2 /* BrewEstateChatUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D5440A51E82A513004A21D2 /* BrewEstateChatUITests.swift */; };
+		1D5440CA1E82A635004A21D2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D5440B61E82A635004A21D2 /* AppDelegate.swift */; };
+		1D5440CB1E82A635004A21D2 /* BrewEstateChat.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 1D5440BC1E82A635004A21D2 /* BrewEstateChat.xcdatamodeld */; };
+		1D5440CC1E82A635004A21D2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1D5440C21E82A635004A21D2 /* LaunchScreen.storyboard */; };
+		1D5440CD1E82A635004A21D2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1D5440C41E82A635004A21D2 /* Main.storyboard */; };
+		1D5440CE1E82A635004A21D2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1D5440C71E82A635004A21D2 /* Assets.xcassets */; };
+		1D5440CF1E82A635004A21D2 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 1D5440C81E82A635004A21D2 /* Info.plist */; };
+		1D5440D11E82A684004A21D2 /* ChatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D5440D01E82A684004A21D2 /* ChatViewController.swift */; };
+		1D5440D31E82A7D6004A21D2 /* DisplayUserViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D5440D21E82A7D6004A21D2 /* DisplayUserViewController.swift */; };
+		1D5440D81E82A81B004A21D2 /* DisplayUserTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D5440D61E82A81B004A21D2 /* DisplayUserTableViewCell.swift */; };
+		1D5440D91E82A81B004A21D2 /* DisplayUserTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1D5440D71E82A81B004A21D2 /* DisplayUserTableViewCell.xib */; };
+		1D5440DC1E82A83A004A21D2 /* IncomingChatTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D5440DA1E82A83A004A21D2 /* IncomingChatTableViewCell.swift */; };
+		1D5440DD1E82A83A004A21D2 /* IncomingChatTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1D5440DB1E82A83A004A21D2 /* IncomingChatTableViewCell.xib */; };
+		1D5440E01E82A849004A21D2 /* OutgoingChatTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D5440DE1E82A849004A21D2 /* OutgoingChatTableViewCell.swift */; };
+		1D5440E11E82A849004A21D2 /* OutgoingChatTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1D5440DF1E82A849004A21D2 /* OutgoingChatTableViewCell.xib */; };
+		1D5440EB1E82A91D004A21D2 /* DataMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D5440E31E82A91D004A21D2 /* DataMessage.swift */; };
+		1D5440EC1E82A91D004A21D2 /* Messages.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D5440E41E82A91D004A21D2 /* Messages.swift */; };
+		1D5440ED1E82A91D004A21D2 /* DataPolling.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D5440E61E82A91D004A21D2 /* DataPolling.swift */; };
+		1D5440EE1E82A91D004A21D2 /* Polling.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D5440E71E82A91D004A21D2 /* Polling.swift */; };
+		1D5440EF1E82A91D004A21D2 /* DataSendMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D5440E91E82A91D004A21D2 /* DataSendMessage.swift */; };
+		1D5440F01E82A91D004A21D2 /* SendMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D5440EA1E82A91D004A21D2 /* SendMessage.swift */; };
+		1D5440F81E82ABB2004A21D2 /* APIConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D5440F11E82ABB2004A21D2 /* APIConstants.swift */; };
+		1D5440F91E82ABB2004A21D2 /* APIHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D5440F21E82ABB2004A21D2 /* APIHandler.swift */; };
+		1D5440FA1E82ABB2004A21D2 /* APIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D5440F31E82ABB2004A21D2 /* APIManager.swift */; };
+		1D5440FB1E82ABB2004A21D2 /* APIRoutes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D5440F41E82ABB2004A21D2 /* APIRoutes.swift */; };
+		1D5440FD1E82ABB2004A21D2 /* HTTPClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D5440F61E82ABB2004A21D2 /* HTTPClient.swift */; };
+		1D5440FE1E82ABB2004A21D2 /* EndPoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D5440F71E82ABB2004A21D2 /* EndPoint.swift */; };
+		1D5441041E82B30E004A21D2 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D5441021E82B30E004A21D2 /* Constants.swift */; };
+		1D5441051E82B30E004A21D2 /* ParamKeys.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D5441031E82B30E004A21D2 /* ParamKeys.swift */; };
+		1D5441071E82C683004A21D2 /* Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D5441061E82C683004A21D2 /* Extension.swift */; };
+		1D54410A1E82C8E8004A21D2 /* TableViewDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D5441091E82C8E8004A21D2 /* TableViewDataSource.swift */; };
+		1D5AA1401E83A931007263F4 /* Utility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D5AA13F1E83A931007263F4 /* Utility.swift */; };
+		1D5AA1421E83A949007263F4 /* AlertBox.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D5AA1411E83A949007263F4 /* AlertBox.swift */; };
+		1D5AA1461E83CF8B007263F4 /* DisplayUserViewControllerExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D5AA1451E83CF8B007263F4 /* DisplayUserViewControllerExtension.swift */; };
+		D3B99A50A62D9D7FD24E1EBB /* Pods_BrewEstateChat.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F64B26A7A7504324DE3E6FF2 /* Pods_BrewEstateChat.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		1D5440971E82A513004A21D2 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 1D5440771E82A512004A21D2 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 1D54407E1E82A513004A21D2;
+			remoteInfo = BrewEstateChat;
+		};
+		1D5440A21E82A513004A21D2 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 1D5440771E82A512004A21D2 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 1D54407E1E82A513004A21D2;
+			remoteInfo = BrewEstateChat;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		1D54407F1E82A513004A21D2 /* BrewEstateChat.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BrewEstateChat.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		1D5440961E82A513004A21D2 /* BrewEstateChatTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BrewEstateChatTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		1D54409A1E82A513004A21D2 /* BrewEstateChatTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BrewEstateChatTests.swift; sourceTree = "<group>"; };
+		1D54409C1E82A513004A21D2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1D5440A11E82A513004A21D2 /* BrewEstateChatUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BrewEstateChatUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		1D5440A51E82A513004A21D2 /* BrewEstateChatUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BrewEstateChatUITests.swift; sourceTree = "<group>"; };
+		1D5440A71E82A513004A21D2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1D5440B61E82A635004A21D2 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		1D5440BD1E82A635004A21D2 /* BrewEstateChat.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = BrewEstateChat.xcdatamodel; sourceTree = "<group>"; };
+		1D5440C31E82A635004A21D2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		1D5440C51E82A635004A21D2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		1D5440C71E82A635004A21D2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		1D5440C81E82A635004A21D2 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1D5440D01E82A684004A21D2 /* ChatViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChatViewController.swift; sourceTree = "<group>"; };
+		1D5440D21E82A7D6004A21D2 /* DisplayUserViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DisplayUserViewController.swift; sourceTree = "<group>"; };
+		1D5440D61E82A81B004A21D2 /* DisplayUserTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DisplayUserTableViewCell.swift; sourceTree = "<group>"; };
+		1D5440D71E82A81B004A21D2 /* DisplayUserTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DisplayUserTableViewCell.xib; sourceTree = "<group>"; };
+		1D5440DA1E82A83A004A21D2 /* IncomingChatTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IncomingChatTableViewCell.swift; sourceTree = "<group>"; };
+		1D5440DB1E82A83A004A21D2 /* IncomingChatTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = IncomingChatTableViewCell.xib; sourceTree = "<group>"; };
+		1D5440DE1E82A849004A21D2 /* OutgoingChatTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OutgoingChatTableViewCell.swift; sourceTree = "<group>"; };
+		1D5440DF1E82A849004A21D2 /* OutgoingChatTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = OutgoingChatTableViewCell.xib; sourceTree = "<group>"; };
+		1D5440E31E82A91D004A21D2 /* DataMessage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataMessage.swift; sourceTree = "<group>"; };
+		1D5440E41E82A91D004A21D2 /* Messages.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Messages.swift; sourceTree = "<group>"; };
+		1D5440E61E82A91D004A21D2 /* DataPolling.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataPolling.swift; sourceTree = "<group>"; };
+		1D5440E71E82A91D004A21D2 /* Polling.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Polling.swift; sourceTree = "<group>"; };
+		1D5440E91E82A91D004A21D2 /* DataSendMessage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataSendMessage.swift; sourceTree = "<group>"; };
+		1D5440EA1E82A91D004A21D2 /* SendMessage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SendMessage.swift; sourceTree = "<group>"; };
+		1D5440F11E82ABB2004A21D2 /* APIConstants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIConstants.swift; sourceTree = "<group>"; };
+		1D5440F21E82ABB2004A21D2 /* APIHandler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIHandler.swift; sourceTree = "<group>"; };
+		1D5440F31E82ABB2004A21D2 /* APIManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIManager.swift; sourceTree = "<group>"; };
+		1D5440F41E82ABB2004A21D2 /* APIRoutes.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIRoutes.swift; sourceTree = "<group>"; };
+		1D5440F61E82ABB2004A21D2 /* HTTPClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HTTPClient.swift; sourceTree = "<group>"; };
+		1D5440F71E82ABB2004A21D2 /* EndPoint.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EndPoint.swift; sourceTree = "<group>"; };
+		1D5441021E82B30E004A21D2 /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		1D5441031E82B30E004A21D2 /* ParamKeys.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ParamKeys.swift; sourceTree = "<group>"; };
+		1D5441061E82C683004A21D2 /* Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Extension.swift; sourceTree = "<group>"; };
+		1D5441091E82C8E8004A21D2 /* TableViewDataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableViewDataSource.swift; sourceTree = "<group>"; };
+		1D5AA13F1E83A931007263F4 /* Utility.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Utility.swift; sourceTree = "<group>"; };
+		1D5AA1411E83A949007263F4 /* AlertBox.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlertBox.swift; sourceTree = "<group>"; };
+		1D5AA1451E83CF8B007263F4 /* DisplayUserViewControllerExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DisplayUserViewControllerExtension.swift; sourceTree = "<group>"; };
+		9F0430B3F417889B16F992A7 /* Pods-BrewEstateChat.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BrewEstateChat.debug.xcconfig"; path = "Pods/Target Support Files/Pods-BrewEstateChat/Pods-BrewEstateChat.debug.xcconfig"; sourceTree = "<group>"; };
+		E4FCA4A71C86F9D6AA6144D3 /* Pods-BrewEstateChat.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BrewEstateChat.release.xcconfig"; path = "Pods/Target Support Files/Pods-BrewEstateChat/Pods-BrewEstateChat.release.xcconfig"; sourceTree = "<group>"; };
+		F64B26A7A7504324DE3E6FF2 /* Pods_BrewEstateChat.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BrewEstateChat.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		1D54407C1E82A513004A21D2 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D3B99A50A62D9D7FD24E1EBB /* Pods_BrewEstateChat.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1D5440931E82A513004A21D2 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1D54409E1E82A513004A21D2 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		1D5440761E82A512004A21D2 = {
+			isa = PBXGroup;
+			children = (
+				1D5440811E82A513004A21D2 /* BrewEstateChat */,
+				1D5440991E82A513004A21D2 /* BrewEstateChatTests */,
+				1D5440A41E82A513004A21D2 /* BrewEstateChatUITests */,
+				1D5440801E82A513004A21D2 /* Products */,
+				657F87BF7E21CAF00ACEFE0C /* Pods */,
+				6A3A59DA5892CBD7B15EFE8F /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		1D5440801E82A513004A21D2 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				1D54407F1E82A513004A21D2 /* BrewEstateChat.app */,
+				1D5440961E82A513004A21D2 /* BrewEstateChatTests.xctest */,
+				1D5440A11E82A513004A21D2 /* BrewEstateChatUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		1D5440811E82A513004A21D2 /* BrewEstateChat */ = {
+			isa = PBXGroup;
+			children = (
+				1D5440B31E82A635004A21D2 /* Everything */,
+			);
+			path = BrewEstateChat;
+			sourceTree = "<group>";
+		};
+		1D5440991E82A513004A21D2 /* BrewEstateChatTests */ = {
+			isa = PBXGroup;
+			children = (
+				1D54409A1E82A513004A21D2 /* BrewEstateChatTests.swift */,
+				1D54409C1E82A513004A21D2 /* Info.plist */,
+			);
+			path = BrewEstateChatTests;
+			sourceTree = "<group>";
+		};
+		1D5440A41E82A513004A21D2 /* BrewEstateChatUITests */ = {
+			isa = PBXGroup;
+			children = (
+				1D5440A51E82A513004A21D2 /* BrewEstateChatUITests.swift */,
+				1D5440A71E82A513004A21D2 /* Info.plist */,
+			);
+			path = BrewEstateChatUITests;
+			sourceTree = "<group>";
+		};
+		1D5440B31E82A635004A21D2 /* Everything */ = {
+			isa = PBXGroup;
+			children = (
+				1D5441081E82C8E8004A21D2 /* DataSource */,
+				1D5440B41E82A635004A21D2 /* APIHandler */,
+				1D5441011E82B30E004A21D2 /* Headers */,
+				1D5440B51E82A635004A21D2 /* AppDelegate */,
+				1D5440B71E82A635004A21D2 /* CommonFunction */,
+				1D5440BB1E82A635004A21D2 /* CoreData */,
+				1D5440BE1E82A635004A21D2 /* MVC */,
+				1D5440C61E82A635004A21D2 /* SupportingFile */,
+				1D5440C91E82A635004A21D2 /* TableViewCell */,
+			);
+			path = Everything;
+			sourceTree = "<group>";
+		};
+		1D5440B41E82A635004A21D2 /* APIHandler */ = {
+			isa = PBXGroup;
+			children = (
+				1D5440F11E82ABB2004A21D2 /* APIConstants.swift */,
+				1D5440F21E82ABB2004A21D2 /* APIHandler.swift */,
+				1D5440F31E82ABB2004A21D2 /* APIManager.swift */,
+				1D5440F41E82ABB2004A21D2 /* APIRoutes.swift */,
+				1D5440F61E82ABB2004A21D2 /* HTTPClient.swift */,
+				1D5440F71E82ABB2004A21D2 /* EndPoint.swift */,
+			);
+			path = APIHandler;
+			sourceTree = "<group>";
+		};
+		1D5440B51E82A635004A21D2 /* AppDelegate */ = {
+			isa = PBXGroup;
+			children = (
+				1D5440B61E82A635004A21D2 /* AppDelegate.swift */,
+			);
+			path = AppDelegate;
+			sourceTree = "<group>";
+		};
+		1D5440B71E82A635004A21D2 /* CommonFunction */ = {
+			isa = PBXGroup;
+			children = (
+				1D5AA13C1E83A931007263F4 /* SharedClass */,
+				1D5440B81E82A635004A21D2 /* APIMethod */,
+				1D5440B91E82A635004A21D2 /* Extension */,
+			);
+			path = CommonFunction;
+			sourceTree = "<group>";
+		};
+		1D5440B81E82A635004A21D2 /* APIMethod */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = APIMethod;
+			sourceTree = "<group>";
+		};
+		1D5440B91E82A635004A21D2 /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				1D5441061E82C683004A21D2 /* Extension.swift */,
+				1D5AA1451E83CF8B007263F4 /* DisplayUserViewControllerExtension.swift */,
+			);
+			path = Extension;
+			sourceTree = "<group>";
+		};
+		1D5440BB1E82A635004A21D2 /* CoreData */ = {
+			isa = PBXGroup;
+			children = (
+				1D5440BC1E82A635004A21D2 /* BrewEstateChat.xcdatamodeld */,
+			);
+			path = CoreData;
+			sourceTree = "<group>";
+		};
+		1D5440BE1E82A635004A21D2 /* MVC */ = {
+			isa = PBXGroup;
+			children = (
+				1D5440BF1E82A635004A21D2 /* Controller */,
+				1D5440C01E82A635004A21D2 /* Modal */,
+				1D5440C11E82A635004A21D2 /* View */,
+			);
+			path = MVC;
+			sourceTree = "<group>";
+		};
+		1D5440BF1E82A635004A21D2 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				1D5440D01E82A684004A21D2 /* ChatViewController.swift */,
+				1D5440D21E82A7D6004A21D2 /* DisplayUserViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		1D5440C01E82A635004A21D2 /* Modal */ = {
+			isa = PBXGroup;
+			children = (
+				1D5440E21E82A91D004A21D2 /* Messages */,
+				1D5440E51E82A91D004A21D2 /* Polling */,
+				1D5440E81E82A91D004A21D2 /* SendMessage */,
+			);
+			path = Modal;
+			sourceTree = "<group>";
+		};
+		1D5440C11E82A635004A21D2 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				1D5440C21E82A635004A21D2 /* LaunchScreen.storyboard */,
+				1D5440C41E82A635004A21D2 /* Main.storyboard */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		1D5440C61E82A635004A21D2 /* SupportingFile */ = {
+			isa = PBXGroup;
+			children = (
+				1D5440C71E82A635004A21D2 /* Assets.xcassets */,
+				1D5440C81E82A635004A21D2 /* Info.plist */,
+			);
+			path = SupportingFile;
+			sourceTree = "<group>";
+		};
+		1D5440C91E82A635004A21D2 /* TableViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				1D5440D61E82A81B004A21D2 /* DisplayUserTableViewCell.swift */,
+				1D5440D71E82A81B004A21D2 /* DisplayUserTableViewCell.xib */,
+				1D5440DA1E82A83A004A21D2 /* IncomingChatTableViewCell.swift */,
+				1D5440DB1E82A83A004A21D2 /* IncomingChatTableViewCell.xib */,
+				1D5440DE1E82A849004A21D2 /* OutgoingChatTableViewCell.swift */,
+				1D5440DF1E82A849004A21D2 /* OutgoingChatTableViewCell.xib */,
+			);
+			path = TableViewCell;
+			sourceTree = "<group>";
+		};
+		1D5440E21E82A91D004A21D2 /* Messages */ = {
+			isa = PBXGroup;
+			children = (
+				1D5440E31E82A91D004A21D2 /* DataMessage.swift */,
+				1D5440E41E82A91D004A21D2 /* Messages.swift */,
+			);
+			path = Messages;
+			sourceTree = "<group>";
+		};
+		1D5440E51E82A91D004A21D2 /* Polling */ = {
+			isa = PBXGroup;
+			children = (
+				1D5440E61E82A91D004A21D2 /* DataPolling.swift */,
+				1D5440E71E82A91D004A21D2 /* Polling.swift */,
+			);
+			path = Polling;
+			sourceTree = "<group>";
+		};
+		1D5440E81E82A91D004A21D2 /* SendMessage */ = {
+			isa = PBXGroup;
+			children = (
+				1D5440E91E82A91D004A21D2 /* DataSendMessage.swift */,
+				1D5440EA1E82A91D004A21D2 /* SendMessage.swift */,
+			);
+			path = SendMessage;
+			sourceTree = "<group>";
+		};
+		1D5441011E82B30E004A21D2 /* Headers */ = {
+			isa = PBXGroup;
+			children = (
+				1D5441021E82B30E004A21D2 /* Constants.swift */,
+				1D5441031E82B30E004A21D2 /* ParamKeys.swift */,
+			);
+			path = Headers;
+			sourceTree = "<group>";
+		};
+		1D5441081E82C8E8004A21D2 /* DataSource */ = {
+			isa = PBXGroup;
+			children = (
+				1D5441091E82C8E8004A21D2 /* TableViewDataSource.swift */,
+			);
+			path = DataSource;
+			sourceTree = "<group>";
+		};
+		1D5AA13C1E83A931007263F4 /* SharedClass */ = {
+			isa = PBXGroup;
+			children = (
+				1D5AA13D1E83A931007263F4 /* AlertBox */,
+				1D5AA13E1E83A931007263F4 /* Utility */,
+			);
+			path = SharedClass;
+			sourceTree = "<group>";
+		};
+		1D5AA13D1E83A931007263F4 /* AlertBox */ = {
+			isa = PBXGroup;
+			children = (
+				1D5AA1411E83A949007263F4 /* AlertBox.swift */,
+			);
+			path = AlertBox;
+			sourceTree = "<group>";
+		};
+		1D5AA13E1E83A931007263F4 /* Utility */ = {
+			isa = PBXGroup;
+			children = (
+				1D5AA13F1E83A931007263F4 /* Utility.swift */,
+			);
+			path = Utility;
+			sourceTree = "<group>";
+		};
+		657F87BF7E21CAF00ACEFE0C /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				9F0430B3F417889B16F992A7 /* Pods-BrewEstateChat.debug.xcconfig */,
+				E4FCA4A71C86F9D6AA6144D3 /* Pods-BrewEstateChat.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		6A3A59DA5892CBD7B15EFE8F /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				F64B26A7A7504324DE3E6FF2 /* Pods_BrewEstateChat.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		1D54407E1E82A513004A21D2 /* BrewEstateChat */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1D5440AA1E82A513004A21D2 /* Build configuration list for PBXNativeTarget "BrewEstateChat" */;
+			buildPhases = (
+				ED3F0260AB480890481022DD /* [CP] Check Pods Manifest.lock */,
+				1D54407B1E82A513004A21D2 /* Sources */,
+				1D54407C1E82A513004A21D2 /* Frameworks */,
+				1D54407D1E82A513004A21D2 /* Resources */,
+				0D218C34A785D48C3D16ACC9 /* [CP] Embed Pods Frameworks */,
+				F40952FAC6B2490E445BC888 /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = BrewEstateChat;
+			productName = BrewEstateChat;
+			productReference = 1D54407F1E82A513004A21D2 /* BrewEstateChat.app */;
+			productType = "com.apple.product-type.application";
+		};
+		1D5440951E82A513004A21D2 /* BrewEstateChatTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1D5440AD1E82A513004A21D2 /* Build configuration list for PBXNativeTarget "BrewEstateChatTests" */;
+			buildPhases = (
+				1D5440921E82A513004A21D2 /* Sources */,
+				1D5440931E82A513004A21D2 /* Frameworks */,
+				1D5440941E82A513004A21D2 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				1D5440981E82A513004A21D2 /* PBXTargetDependency */,
+			);
+			name = BrewEstateChatTests;
+			productName = BrewEstateChatTests;
+			productReference = 1D5440961E82A513004A21D2 /* BrewEstateChatTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		1D5440A01E82A513004A21D2 /* BrewEstateChatUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1D5440B01E82A513004A21D2 /* Build configuration list for PBXNativeTarget "BrewEstateChatUITests" */;
+			buildPhases = (
+				1D54409D1E82A513004A21D2 /* Sources */,
+				1D54409E1E82A513004A21D2 /* Frameworks */,
+				1D54409F1E82A513004A21D2 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				1D5440A31E82A513004A21D2 /* PBXTargetDependency */,
+			);
+			name = BrewEstateChatUITests;
+			productName = BrewEstateChatUITests;
+			productReference = 1D5440A11E82A513004A21D2 /* BrewEstateChatUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		1D5440771E82A512004A21D2 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0820;
+				LastUpgradeCheck = 0820;
+				ORGANIZATIONNAME = codebrew;
+				TargetAttributes = {
+					1D54407E1E82A513004A21D2 = {
+						CreatedOnToolsVersion = 8.2.1;
+						DevelopmentTeam = 3K6JQ87GJE;
+						ProvisioningStyle = Automatic;
+					};
+					1D5440951E82A513004A21D2 = {
+						CreatedOnToolsVersion = 8.2.1;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 1D54407E1E82A513004A21D2;
+					};
+					1D5440A01E82A513004A21D2 = {
+						CreatedOnToolsVersion = 8.2.1;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 1D54407E1E82A513004A21D2;
+					};
+				};
+			};
+			buildConfigurationList = 1D54407A1E82A512004A21D2 /* Build configuration list for PBXProject "BrewEstateChat" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 1D5440761E82A512004A21D2;
+			productRefGroup = 1D5440801E82A513004A21D2 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				1D54407E1E82A513004A21D2 /* BrewEstateChat */,
+				1D5440951E82A513004A21D2 /* BrewEstateChatTests */,
+				1D5440A01E82A513004A21D2 /* BrewEstateChatUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		1D54407D1E82A513004A21D2 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1D5440CF1E82A635004A21D2 /* Info.plist in Resources */,
+				1D5440CC1E82A635004A21D2 /* LaunchScreen.storyboard in Resources */,
+				1D5440CE1E82A635004A21D2 /* Assets.xcassets in Resources */,
+				1D5440DD1E82A83A004A21D2 /* IncomingChatTableViewCell.xib in Resources */,
+				1D5440D91E82A81B004A21D2 /* DisplayUserTableViewCell.xib in Resources */,
+				1D5440E11E82A849004A21D2 /* OutgoingChatTableViewCell.xib in Resources */,
+				1D5440CD1E82A635004A21D2 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1D5440941E82A513004A21D2 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1D54409F1E82A513004A21D2 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		0D218C34A785D48C3D16ACC9 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-BrewEstateChat/Pods-BrewEstateChat-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		ED3F0260AB480890481022DD /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		F40952FAC6B2490E445BC888 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-BrewEstateChat/Pods-BrewEstateChat-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		1D54407B1E82A513004A21D2 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1D5AA1461E83CF8B007263F4 /* DisplayUserViewControllerExtension.swift in Sources */,
+				1D5AA1421E83A949007263F4 /* AlertBox.swift in Sources */,
+				1D5440FA1E82ABB2004A21D2 /* APIManager.swift in Sources */,
+				1D5441041E82B30E004A21D2 /* Constants.swift in Sources */,
+				1D5440EE1E82A91D004A21D2 /* Polling.swift in Sources */,
+				1D5440FB1E82ABB2004A21D2 /* APIRoutes.swift in Sources */,
+				1D5440EF1E82A91D004A21D2 /* DataSendMessage.swift in Sources */,
+				1D5440FE1E82ABB2004A21D2 /* EndPoint.swift in Sources */,
+				1D5440E01E82A849004A21D2 /* OutgoingChatTableViewCell.swift in Sources */,
+				1D5440EC1E82A91D004A21D2 /* Messages.swift in Sources */,
+				1D5440CA1E82A635004A21D2 /* AppDelegate.swift in Sources */,
+				1D5440D81E82A81B004A21D2 /* DisplayUserTableViewCell.swift in Sources */,
+				1D54410A1E82C8E8004A21D2 /* TableViewDataSource.swift in Sources */,
+				1D5440EB1E82A91D004A21D2 /* DataMessage.swift in Sources */,
+				1D5440ED1E82A91D004A21D2 /* DataPolling.swift in Sources */,
+				1D5440F81E82ABB2004A21D2 /* APIConstants.swift in Sources */,
+				1D5440F01E82A91D004A21D2 /* SendMessage.swift in Sources */,
+				1D5441071E82C683004A21D2 /* Extension.swift in Sources */,
+				1D5441051E82B30E004A21D2 /* ParamKeys.swift in Sources */,
+				1D5440D11E82A684004A21D2 /* ChatViewController.swift in Sources */,
+				1D5440D31E82A7D6004A21D2 /* DisplayUserViewController.swift in Sources */,
+				1D5440F91E82ABB2004A21D2 /* APIHandler.swift in Sources */,
+				1D5AA1401E83A931007263F4 /* Utility.swift in Sources */,
+				1D5440CB1E82A635004A21D2 /* BrewEstateChat.xcdatamodeld in Sources */,
+				1D5440FD1E82ABB2004A21D2 /* HTTPClient.swift in Sources */,
+				1D5440DC1E82A83A004A21D2 /* IncomingChatTableViewCell.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1D5440921E82A513004A21D2 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1D54409B1E82A513004A21D2 /* BrewEstateChatTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1D54409D1E82A513004A21D2 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1D5440A61E82A513004A21D2 /* BrewEstateChatUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		1D5440981E82A513004A21D2 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 1D54407E1E82A513004A21D2 /* BrewEstateChat */;
+			targetProxy = 1D5440971E82A513004A21D2 /* PBXContainerItemProxy */;
+		};
+		1D5440A31E82A513004A21D2 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 1D54407E1E82A513004A21D2 /* BrewEstateChat */;
+			targetProxy = 1D5440A21E82A513004A21D2 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		1D5440C21E82A635004A21D2 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				1D5440C31E82A635004A21D2 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		1D5440C41E82A635004A21D2 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				1D5440C51E82A635004A21D2 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		1D5440A81E82A513004A21D2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		1D5440A91E82A513004A21D2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		1D5440AB1E82A513004A21D2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9F0430B3F417889B16F992A7 /* Pods-BrewEstateChat.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 3K6JQ87GJE;
+				INFOPLIST_FILE = "$(SRCROOT)/BrewEstateChat/Everything/SupportingFile/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.code-brew.BrewEstateChat";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Debug;
+		};
+		1D5440AC1E82A513004A21D2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = E4FCA4A71C86F9D6AA6144D3 /* Pods-BrewEstateChat.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 3K6JQ87GJE;
+				INFOPLIST_FILE = "$(SRCROOT)/BrewEstateChat/Everything/SupportingFile/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.code-brew.BrewEstateChat";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Release;
+		};
+		1D5440AE1E82A513004A21D2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = BrewEstateChatTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.code-brew.BrewEstateChatTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/BrewEstateChat.app/BrewEstateChat";
+			};
+			name = Debug;
+		};
+		1D5440AF1E82A513004A21D2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = BrewEstateChatTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.code-brew.BrewEstateChatTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/BrewEstateChat.app/BrewEstateChat";
+			};
+			name = Release;
+		};
+		1D5440B11E82A513004A21D2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				INFOPLIST_FILE = BrewEstateChatUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.code-brew.BrewEstateChatUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_TARGET_NAME = BrewEstateChat;
+			};
+			name = Debug;
+		};
+		1D5440B21E82A513004A21D2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				INFOPLIST_FILE = BrewEstateChatUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.code-brew.BrewEstateChatUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_TARGET_NAME = BrewEstateChat;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		1D54407A1E82A512004A21D2 /* Build configuration list for PBXProject "BrewEstateChat" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1D5440A81E82A513004A21D2 /* Debug */,
+				1D5440A91E82A513004A21D2 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		1D5440AA1E82A513004A21D2 /* Build configuration list for PBXNativeTarget "BrewEstateChat" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1D5440AB1E82A513004A21D2 /* Debug */,
+				1D5440AC1E82A513004A21D2 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		1D5440AD1E82A513004A21D2 /* Build configuration list for PBXNativeTarget "BrewEstateChatTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1D5440AE1E82A513004A21D2 /* Debug */,
+				1D5440AF1E82A513004A21D2 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		1D5440B01E82A513004A21D2 /* Build configuration list for PBXNativeTarget "BrewEstateChatUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1D5440B11E82A513004A21D2 /* Debug */,
+				1D5440B21E82A513004A21D2 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		1D5440BC1E82A635004A21D2 /* BrewEstateChat.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				1D5440BD1E82A635004A21D2 /* BrewEstateChat.xcdatamodel */,
+			);
+			currentVersion = 1D5440BD1E82A635004A21D2 /* BrewEstateChat.xcdatamodel */;
+			path = BrewEstateChat.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = 1D5440771E82A512004A21D2 /* Project object */;
+}
