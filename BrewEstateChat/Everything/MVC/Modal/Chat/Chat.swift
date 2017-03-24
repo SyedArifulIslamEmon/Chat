@@ -1,17 +1,17 @@
 //
-//  Data.swift
-//  chat
+//  Message.swift
+//  BrewEstateChat
 //
-//  Created by Sierra 4 on 28/02/17.
+//  Created by Sierra 4 on 24/03/17.
 //  Copyright © 2017 codebrew. All rights reserved.
 //
 
 //module imported
 import Foundation
-import UIKit
 import SwiftyJSON
 
-class DataMessage: NSObject {
+//model class defined for messages api
+class Chat: NSObject{
     
     var profile_pic: String?
     var name: String?
@@ -24,7 +24,7 @@ class DataMessage: NSObject {
     var blocked_by_me: String?
     var id: String?
     
-    required init(attributes: OptionalJSON) throws{
+    init(attributes: OptionalJSON) {
         super.init()
         
         profile_pic = .profile_pic => attributes
@@ -37,7 +37,5 @@ class DataMessage: NSObject {
         is_blocked = .is_blocked => attributes
         blocked_by_me = .blocked_by_me => attributes
         id = .id => attributes
-        
     }
 }
-

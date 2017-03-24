@@ -16,6 +16,13 @@ class IncomingChatTableViewCell: UITableViewCell {
     @IBOutlet var lblIncomingText: UILabel!
     @IBOutlet var lblIncomingTime: UILabel!
     
+    var message : Message? {
+        didSet{
+            self.lblIncomingText?.text = message?.message
+            self.lblIncomingTime?.text = message?.timezone
+        }
+    }
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code

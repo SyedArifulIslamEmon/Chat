@@ -32,33 +32,27 @@ extension DisplayUserViewController{
             
         case .success(let responseValue):
             
-            guard let messages = responseValue as? Messages else{ fatalError()}
+            guard let chats = responseValue as? [Chat] else{ return }
             Alerts.shared.show(alert: .success, message: "success", type: .success)
-            
-            guard  let itemCount = messages.dataMessage else {
-                fatalError()
-            }
+            self.chats = chats
            
-            dataSourceTableViewDisplayUser = TableViewDataSource(items: itemCount, height: UITableViewAutomaticDimension, tableView: tableViewDisplayUser, cellIdentifier: "displayUserTableViewCell", configureCellBlock: { (cell, item, indexPath) in
+            dataSource = TableViewDataSource(items: chats, height: UITableViewAutomaticDimension, tableView: tableViewDisplayUser, cellIdentifier: "displayUserTableViewCell", configureCellBlock: { (cell, item, indexPath) in
                 //Cell for row at indexpath
                 
-                (cell as? DisplayUserTableViewCell)?.lblUserName.text = /messages.dataMessage?[indexPath.row].name
-                (cell as? DisplayUserTableViewCell)?.lblLastMessage.text = /messages.dataMessage?[indexPath.row].name
-                (cell as? DisplayUserTableViewCell)?.lblLastMessageTime.text = /messages.dataMessage?[indexPath.row].name
+                (cell as? DisplayUserTableViewCell)?.chat = chats[indexPath.row]
                 
             }, aRowSelectedListener: { (indexPath) in
                 //DidSelectRow at index path
                 
-                Utility.functions.startAnimating(nil, message: nil, messageFont: nil, type: .lineScalePulseOutRapid, color: UIColor.white, padding: nil, displayTimeThreshold: nil, minimumDisplayTime: nil)
                 
                 guard let vc = ChatViewController.instantiate(fromStoryboard: "Main",id: "ChatViewController") else { return }
                 self.navigationController?.pushViewController(vc, animated: true)
                 
-                Utility.functions.stopAnimating()
+               
                 
             }, DidScrollListener: nil)
-            tableViewDisplayUser.delegate = dataSourceTableViewDisplayUser
-            tableViewDisplayUser.dataSource = dataSourceTableViewDisplayUser
+            tableViewDisplayUser.delegate = dataSource
+            tableViewDisplayUser.dataSource = dataSource
             tableViewDisplayUser.reloadData()
             
             

@@ -11,22 +11,25 @@ import SwiftyJSON
 
 extension EndPoint {
     
-    func handle(parameters : JSON) -> AnyObject? {
+    func handle(parameters: JSON) -> Any? {
         switch self {
+        case .polling(_):
+            var messages : [Message] = []
+            parameters["data"].arrayValue.forEach({ (element) in
+                messages.append(Message(attributes: element.dictionaryValue))
+            })
+            return  messages
+            
         case .messages(_):
-            do {
-                return try Messages(attributes: parameters.dictionaryValue )
-            } catch _ { return nil }
+            var messages : [Chat] = []
+            parameters["data"].arrayValue.forEach({ (element) in
+                messages.append(Chat(attributes: element.dictionaryValue))
+            })
+            return  messages
             
         case .sendMessage(_):
-            do {
-                return try SendMessage(attributes: parameters.dictionaryValue )
-            } catch _ { return nil }
             
-        case .polling(_):
-            do {
-                return try Polling(attributes: parameters.dictionaryValue )
-            } catch _ { return nil }
+            return Message(attributes: parameters["data"].dictionaryValue )
         }
     }
 }

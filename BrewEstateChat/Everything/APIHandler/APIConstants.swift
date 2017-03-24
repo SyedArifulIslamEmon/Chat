@@ -71,7 +71,7 @@ enum Validate : String {
 }
 
 enum Response {
-    case success(AnyObject?)
+    case success(Any?)
     case failure(Validate)
 }
 

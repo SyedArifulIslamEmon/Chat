@@ -15,7 +15,7 @@ protocol Router {
     var baseURL : String { get }
     var parameters : OptionalDictionary { get }
     var method : Alamofire.HTTPMethod { get }
-    func handle(parameters : JSON) -> AnyObject?
+    func handle(parameters : JSON) -> Any?
 }
 
 extension Sequence where Iterator.Element == Keys {

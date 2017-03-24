@@ -83,24 +83,23 @@ extension ChatViewController{
             
         case .success(let responseValue):
             
-            guard let sendMessage = responseValue as? SendMessage else {fatalError()}
+            guard let message = responseValue as? [Message] else {return}
             Alerts.shared.show(alert: .success, message: "success", type: .success)
+            self.message = message
             
             //guard  let itemCount = sendMessage.dataSendMessage else {fatalError()}
             
-            dataSourceTableViewChat =  TableViewDataSource(items: sentMessage as Array<AnyObject>?, height: UITableViewAutomaticDimension, tableView: tableViewChat, cellIdentifier: "outgoingChatTableViewCell", configureCellBlock: { (cell, item, indexPath) in
+            dataSource =  TableViewDataSource(items: message, height: UITableViewAutomaticDimension, tableView: tableViewChat, cellIdentifier: "outgoingChatTableViewCell", configureCellBlock: { (cell, item, indexPath) in
                     //Cell for row at indexpath
                 
-                (cell as? OutgoingChatTableViewCell)?.lblOutgoingText.text = self.sentMessage[indexPath.row].trimmingCharacters(in: CharacterSet.whitespacesAndNewlines)
-                (cell as? OutgoingChatTableViewCell)?.lblOutgoingTime.text = self.sentTime[indexPath.row]
+                (cell as? OutgoingChatTableViewCell)?.message = message[indexPath.row]
                 
                     }, aRowSelectedListener: { (indexPath) in
                         //DidSelectRow at index path
-            
-                        
+        
                     }, DidScrollListener: nil)
-            tableViewChat.delegate = dataSourceTableViewChat
-            tableViewChat.dataSource = dataSourceTableViewChat
+            tableViewChat.delegate = dataSource
+            tableViewChat.dataSource = dataSource
             tableViewChat.reloadData()
             
             
@@ -108,7 +107,6 @@ extension ChatViewController{
             Alerts.shared.show(alert: .oops, message: /str.rawValue, type: .error)
         }
     }
-    
     
     func pollingAPI(){
         ISMessages.hideAlert(animated: true)
@@ -123,25 +121,23 @@ extension ChatViewController{
             
         case .success(let responseValue):
             
-            guard let polling = responseValue as? Polling else {fatalError()}
+            guard let polling = responseValue as? [Message] else {return}
             Alerts.shared.show(alert: .success, message: "success", type: .success)
             
-//            guard  let itemCount = polling.dataPolling else {fatalError()}
-//            
-//            dataSourceTableViewChat =  TableViewDataSource(items: itemCount as Array<AnyObject>?, height: UITableViewAutomaticDimension, tableView: tableViewChat, cellIdentifier: "incomingChatTableViewCell", configureCellBlock: { (cell, item, indexPath) in
-//                //Cell for row at indexpath
-//                
-//                (cell as? IncomingChatTableViewCell)?.lblIncomingText.text = self.sentMessage[indexPath.row].trimmingCharacters(in: CharacterSet.whitespacesAndNewlines)
-//                (cell as? IncomingChatTableViewCell)?.lblIncomingTime.text = self.sentTime[indexPath.row]
-//                
-//            }, aRowSelectedListener: { (indexPath) in
-//                //DidSelectRow at index path
-//                
-//                
-//            }, DidScrollListener: nil)
-//            tableViewChat.delegate = dataSourceTableViewChat
-//            tableViewChat.dataSource = dataSourceTableViewChat
-//            tableViewChat.reloadData()
+            dataSource =  TableViewDataSource(items: polling, height: UITableViewAutomaticDimension, tableView: tableViewChat, cellIdentifier: "incomingChatTableViewCell", configureCellBlock: { (cell, item, indexPath) in
+                //Cell for row at indexpath
+                
+                (cell as? IncomingChatTableViewCell)?.lblIncomingText.text = self.sentMessage[indexPath.row].trimmingCharacters(in: CharacterSet.whitespacesAndNewlines)
+                (cell as? IncomingChatTableViewCell)?.lblIncomingTime.text = self.sentTime[indexPath.row]
+                
+            }, aRowSelectedListener: { (indexPath) in
+                //DidSelectRow at index path
+                
+                
+            }, DidScrollListener: nil)
+            tableViewChat.delegate = dataSource
+            tableViewChat.dataSource = dataSource
+            tableViewChat.reloadData()
             
             
         case .failure(let str):

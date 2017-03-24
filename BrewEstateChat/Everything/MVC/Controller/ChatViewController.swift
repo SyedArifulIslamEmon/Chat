@@ -31,7 +31,13 @@ class ChatViewController: UIViewController, UIImagePickerControllerDelegate, UIN
     
     var doubleTap:Bool = false
     
-    var dataSourceTableViewChat = TableViewDataSource()
+    var dataSource = TableViewDataSource()
+    
+    var message : [Message]?{
+        didSet{
+            tableViewChat.reloadData()
+        }
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()

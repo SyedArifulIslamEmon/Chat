@@ -34,17 +34,14 @@ class APIManager : UIViewController, NVActivityIndicatorViewable{
             let json = JSON(response)
             print(json)
             if json[APIConstants.status].stringValue == Validate.invalidAccessToken.rawValue{
-                if #available(iOS 10.0, *) {
+               
                     self?.tokenExpired()
-                } else {
-                    // Fallback on earlier versions
-                }
-                return
+                               return
             }
             
             let responseType = Validate(rawValue: json[APIConstants.status].stringValue) ?? .failure
             if responseType == Validate.success{
-                let object : AnyObject?
+                let object : Any?
                 object = api.handle(parameters: json)
                 completion(Response.success(object))
                 return
@@ -74,11 +71,9 @@ class APIManager : UIViewController, NVActivityIndicatorViewable{
             let json = JSON(response)
             print(json)
             if json[APIConstants.status].stringValue == Validate.invalidAccessToken.rawValue{
-                if #available(iOS 10.0, *) {
+              
                     self?.tokenExpired()
-                } else {
-                    // Fallback on earlier versions
-                }
+                
                 return
             }
             
@@ -86,7 +81,7 @@ class APIManager : UIViewController, NVActivityIndicatorViewable{
             
             switch responseType {
             case .success:
-                let object : AnyObject?
+                let object : Any?
                 object = api.handle(parameters: json)
                 completion(Response.success(object))
                 
@@ -101,7 +96,6 @@ class APIManager : UIViewController, NVActivityIndicatorViewable{
         })
     }
     
-    @available(iOS 10.0, *)
     func tokenExpired(){
         let delegate = UIApplication.shared.delegate as? AppDelegate
         delegate?.logout()

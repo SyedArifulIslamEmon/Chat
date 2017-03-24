@@ -1,8 +1,8 @@
 //
-//  DataSendMessage.swift
-//  chat
+//  Message.swift
+//  BrewEstateChat
 //
-//  Created by Sierra 4 on 01/03/17.
+//  Created by Sierra 4 on 24/03/17.
 //  Copyright © 2017 codebrew. All rights reserved.
 //
 
@@ -11,7 +11,7 @@ import Foundation
 import SwiftyJSON
 
 //model class defined for dataSendMessage
-class DataSendMessage: NSObject{
+class Message: NSObject{
     
     var chat_type: String?,
     image: String?,
@@ -21,9 +21,8 @@ class DataSendMessage: NSObject{
     message: String?,
     id: String?,
     video_thumbnail: String?
-
-
-    required init(attributes: OptionalJSON) throws{
+    
+    init(attributes: OptionalJSON) {
         super.init()
         
         chat_type = .chat_type => attributes
@@ -34,7 +33,5 @@ class DataSendMessage: NSObject{
         message = .message => attributes
         id = .id => attributes
         video_thumbnail = .video_thumbnail => attributes
-       
-        
     }
 }

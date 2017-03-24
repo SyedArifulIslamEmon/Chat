@@ -16,6 +16,15 @@ class DisplayUserTableViewCell: UITableViewCell {
     @IBOutlet var lblLastMessage: UILabel!
     @IBOutlet var lblLastMessageTime: UILabel!
 
+    var chat : Chat? {
+        didSet{
+            
+            self.lblUserName?.text = chat?.name
+            self.lblLastMessage?.text = chat?.last_message
+            self.lblLastMessageTime?.text = ""
+        }
+    }
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code

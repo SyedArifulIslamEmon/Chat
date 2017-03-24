@@ -18,6 +18,12 @@ class OutgoingChatTableViewCell: UITableViewCell {
     
     @IBOutlet var imgDelivery: UIImageView!
     
+    var message : Message? {
+        didSet{
+            self.lblOutgoingText?.text = message?.message
+            self.lblOutgoingTime?.text = message?.timezone
+        }
+    }
     
     override func awakeFromNib() {
         super.awakeFromNib()

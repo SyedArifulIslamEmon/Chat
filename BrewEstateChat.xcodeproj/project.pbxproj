@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1D0BA11F1E8501EB002E2FAD /* Chat.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D0BA11E1E8501EB002E2FAD /* Chat.swift */; };
+		1D0BA1231E8503E6002E2FAD /* Message.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D0BA1221E8503E6002E2FAD /* Message.swift */; };
 		1D54409B1E82A513004A21D2 /* BrewEstateChatTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D54409A1E82A513004A21D2 /* BrewEstateChatTests.swift */; };
 		1D5440A61E82A513004A21D2 /* BrewEstateChatUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D5440A51E82A513004A21D2 /* BrewEstateChatUITests.swift */; };
 		1D5440CA1E82A635004A21D2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D5440B61E82A635004A21D2 /* AppDelegate.swift */; };
@@ -23,12 +25,6 @@
 		1D5440DD1E82A83A004A21D2 /* IncomingChatTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1D5440DB1E82A83A004A21D2 /* IncomingChatTableViewCell.xib */; };
 		1D5440E01E82A849004A21D2 /* OutgoingChatTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D5440DE1E82A849004A21D2 /* OutgoingChatTableViewCell.swift */; };
 		1D5440E11E82A849004A21D2 /* OutgoingChatTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1D5440DF1E82A849004A21D2 /* OutgoingChatTableViewCell.xib */; };
-		1D5440EB1E82A91D004A21D2 /* DataMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D5440E31E82A91D004A21D2 /* DataMessage.swift */; };
-		1D5440EC1E82A91D004A21D2 /* Messages.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D5440E41E82A91D004A21D2 /* Messages.swift */; };
-		1D5440ED1E82A91D004A21D2 /* DataPolling.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D5440E61E82A91D004A21D2 /* DataPolling.swift */; };
-		1D5440EE1E82A91D004A21D2 /* Polling.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D5440E71E82A91D004A21D2 /* Polling.swift */; };
-		1D5440EF1E82A91D004A21D2 /* DataSendMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D5440E91E82A91D004A21D2 /* DataSendMessage.swift */; };
-		1D5440F01E82A91D004A21D2 /* SendMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D5440EA1E82A91D004A21D2 /* SendMessage.swift */; };
 		1D5440F81E82ABB2004A21D2 /* APIConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D5440F11E82ABB2004A21D2 /* APIConstants.swift */; };
 		1D5440F91E82ABB2004A21D2 /* APIHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D5440F21E82ABB2004A21D2 /* APIHandler.swift */; };
 		1D5440FA1E82ABB2004A21D2 /* APIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D5440F31E82ABB2004A21D2 /* APIManager.swift */; };
@@ -65,6 +61,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		1D0BA11E1E8501EB002E2FAD /* Chat.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Chat.swift; sourceTree = "<group>"; };
+		1D0BA1221E8503E6002E2FAD /* Message.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Message.swift; sourceTree = "<group>"; };
 		1D54407F1E82A513004A21D2 /* BrewEstateChat.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BrewEstateChat.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1D5440961E82A513004A21D2 /* BrewEstateChatTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BrewEstateChatTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		1D54409A1E82A513004A21D2 /* BrewEstateChatTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BrewEstateChatTests.swift; sourceTree = "<group>"; };
@@ -86,12 +84,6 @@
 		1D5440DB1E82A83A004A21D2 /* IncomingChatTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = IncomingChatTableViewCell.xib; sourceTree = "<group>"; };
 		1D5440DE1E82A849004A21D2 /* OutgoingChatTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OutgoingChatTableViewCell.swift; sourceTree = "<group>"; };
 		1D5440DF1E82A849004A21D2 /* OutgoingChatTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = OutgoingChatTableViewCell.xib; sourceTree = "<group>"; };
-		1D5440E31E82A91D004A21D2 /* DataMessage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataMessage.swift; sourceTree = "<group>"; };
-		1D5440E41E82A91D004A21D2 /* Messages.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Messages.swift; sourceTree = "<group>"; };
-		1D5440E61E82A91D004A21D2 /* DataPolling.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataPolling.swift; sourceTree = "<group>"; };
-		1D5440E71E82A91D004A21D2 /* Polling.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Polling.swift; sourceTree = "<group>"; };
-		1D5440E91E82A91D004A21D2 /* DataSendMessage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataSendMessage.swift; sourceTree = "<group>"; };
-		1D5440EA1E82A91D004A21D2 /* SendMessage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SendMessage.swift; sourceTree = "<group>"; };
 		1D5440F11E82ABB2004A21D2 /* APIConstants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIConstants.swift; sourceTree = "<group>"; };
 		1D5440F21E82ABB2004A21D2 /* APIHandler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIHandler.swift; sourceTree = "<group>"; };
 		1D5440F31E82ABB2004A21D2 /* APIManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIManager.swift; sourceTree = "<group>"; };
@@ -138,6 +130,22 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1D0BA11C1E8501D1002E2FAD /* Chat */ = {
+			isa = PBXGroup;
+			children = (
+				1D0BA11E1E8501EB002E2FAD /* Chat.swift */,
+			);
+			path = Chat;
+			sourceTree = "<group>";
+		};
+		1D0BA11D1E8501D1002E2FAD /* Message */ = {
+			isa = PBXGroup;
+			children = (
+				1D0BA1221E8503E6002E2FAD /* Message.swift */,
+			);
+			path = Message;
+			sourceTree = "<group>";
+		};
 		1D5440761E82A512004A21D2 = {
 			isa = PBXGroup;
 			children = (
@@ -280,9 +288,8 @@
 		1D5440C01E82A635004A21D2 /* Modal */ = {
 			isa = PBXGroup;
 			children = (
-				1D5440E21E82A91D004A21D2 /* Messages */,
-				1D5440E51E82A91D004A21D2 /* Polling */,
-				1D5440E81E82A91D004A21D2 /* SendMessage */,
+				1D0BA11C1E8501D1002E2FAD /* Chat */,
+				1D0BA11D1E8501D1002E2FAD /* Message */,
 			);
 			path = Modal;
 			sourceTree = "<group>";
@@ -316,33 +323,6 @@
 				1D5440DF1E82A849004A21D2 /* OutgoingChatTableViewCell.xib */,
 			);
 			path = TableViewCell;
-			sourceTree = "<group>";
-		};
-		1D5440E21E82A91D004A21D2 /* Messages */ = {
-			isa = PBXGroup;
-			children = (
-				1D5440E31E82A91D004A21D2 /* DataMessage.swift */,
-				1D5440E41E82A91D004A21D2 /* Messages.swift */,
-			);
-			path = Messages;
-			sourceTree = "<group>";
-		};
-		1D5440E51E82A91D004A21D2 /* Polling */ = {
-			isa = PBXGroup;
-			children = (
-				1D5440E61E82A91D004A21D2 /* DataPolling.swift */,
-				1D5440E71E82A91D004A21D2 /* Polling.swift */,
-			);
-			path = Polling;
-			sourceTree = "<group>";
-		};
-		1D5440E81E82A91D004A21D2 /* SendMessage */ = {
-			isa = PBXGroup;
-			children = (
-				1D5440E91E82A91D004A21D2 /* DataSendMessage.swift */,
-				1D5440EA1E82A91D004A21D2 /* SendMessage.swift */,
-			);
-			path = SendMessage;
 			sourceTree = "<group>";
 		};
 		1D5441011E82B30E004A21D2 /* Headers */ = {
@@ -599,20 +579,16 @@
 				1D5AA1421E83A949007263F4 /* AlertBox.swift in Sources */,
 				1D5440FA1E82ABB2004A21D2 /* APIManager.swift in Sources */,
 				1D5441041E82B30E004A21D2 /* Constants.swift in Sources */,
-				1D5440EE1E82A91D004A21D2 /* Polling.swift in Sources */,
+				1D0BA1231E8503E6002E2FAD /* Message.swift in Sources */,
 				1D5440FB1E82ABB2004A21D2 /* APIRoutes.swift in Sources */,
 				1D5AA14A1E83EFAB007263F4 /* CurrentTime.swift in Sources */,
-				1D5440EF1E82A91D004A21D2 /* DataSendMessage.swift in Sources */,
 				1D5440FE1E82ABB2004A21D2 /* EndPoint.swift in Sources */,
 				1D5440E01E82A849004A21D2 /* OutgoingChatTableViewCell.swift in Sources */,
-				1D5440EC1E82A91D004A21D2 /* Messages.swift in Sources */,
 				1D5440CA1E82A635004A21D2 /* AppDelegate.swift in Sources */,
 				1D5440D81E82A81B004A21D2 /* DisplayUserTableViewCell.swift in Sources */,
 				1D54410A1E82C8E8004A21D2 /* TableViewDataSource.swift in Sources */,
-				1D5440EB1E82A91D004A21D2 /* DataMessage.swift in Sources */,
-				1D5440ED1E82A91D004A21D2 /* DataPolling.swift in Sources */,
 				1D5440F81E82ABB2004A21D2 /* APIConstants.swift in Sources */,
-				1D5440F01E82A91D004A21D2 /* SendMessage.swift in Sources */,
+				1D0BA11F1E8501EB002E2FAD /* Chat.swift in Sources */,
 				1D5441071E82C683004A21D2 /* Extension.swift in Sources */,
 				1D5441051E82B30E004A21D2 /* ParamKeys.swift in Sources */,
 				1D5440D11E82A684004A21D2 /* ChatViewController.swift in Sources */,

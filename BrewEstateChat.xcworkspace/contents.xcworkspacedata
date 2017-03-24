@@ -2,6 +2,12 @@
 <Workspace
    version = "1.0">
    <FileRef
+      location = "group:ChatCD+CoreDataClass.swift">
+   </FileRef>
+   <FileRef
+      location = "group:ChatCD+CoreDataProperties.swift">
+   </FileRef>
+   <FileRef
       location = "group:BrewEstateChat.xcodeproj">
    </FileRef>
    <FileRef

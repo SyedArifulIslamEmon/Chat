@@ -14,7 +14,13 @@ class DisplayUserViewController: UIViewController{
 
     @IBOutlet var tableViewDisplayUser: UITableView!
     
-    var dataSourceTableViewDisplayUser = TableViewDataSource()
+    var dataSource = TableViewDataSource()
+    
+    var chats : [Chat]?{
+        didSet{
+            tableViewDisplayUser.reloadData()
+        }
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
