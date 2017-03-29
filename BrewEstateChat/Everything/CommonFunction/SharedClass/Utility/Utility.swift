@@ -19,7 +19,7 @@ class Utility: UIViewController, NVActivityIndicatorViewable {
     
     //function to show loader
     func startLoader()  {
-        startAnimating(nil, message: nil, messageFont: nil, type: .lineSpinFadeLoader, color: UIColor.white, padding: nil, displayTimeThreshold: nil, minimumDisplayTime: nil)
+        startAnimating(nil, message: nil, messageFont: nil, type: .lineScalePulseOutRapid, color: UIColor.white, padding: nil, displayTimeThreshold: nil, minimumDisplayTime: nil)
     }
     
     //function to hide loader

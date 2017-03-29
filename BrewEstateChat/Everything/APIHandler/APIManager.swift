@@ -103,8 +103,9 @@ class APIManager : UIViewController, NVActivityIndicatorViewable{
     
     func isLoaderNeeded(api : Router) -> Bool{
         switch api.route {
-        //case APIConstants.home : return false
-        default: return true
+            case APIConstants.polling : return false
+            case APIConstants.sendMessage : return false
+            default: return true
         }
     }
 }

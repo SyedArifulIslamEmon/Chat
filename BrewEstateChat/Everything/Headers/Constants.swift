@@ -35,20 +35,3 @@ func =<(key : ParamKeys, json : OptionalJSON) -> [String : JSON]?{
 func =|(key : ParamKeys, json : OptionalJSON) -> [JSON]?{
     return json?[key.rawValue]?.arrayValue
 }
-
-prefix operator /
-
-//MARK:- FUNCTION-unwrappingString
-prefix func /(value : String?) -> String {
-    return value.unwrapString()
-}
-
-//MARK:- FUNCTION-unwrappingInt
-prefix func /(value : Int?) -> Int {
-    return value.unwrapInt()
-}
-
-//MARK:- FUNCTION-unwrappingInt32
-prefix func /(value : Int32?) -> Int32 {
-    return value.unwrapInt32()
-}

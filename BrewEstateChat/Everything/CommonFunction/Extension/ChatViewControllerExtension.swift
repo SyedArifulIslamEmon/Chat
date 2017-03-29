@@ -9,11 +9,14 @@
 import Foundation
 import UIKit
 import ISMessages
+import IQKeyboardManagerSwift
 
-extension ChatViewController{
+extension ChatViewController: UITextViewDelegate{
     
     //MARK:- LIFE CYCLE- ViewDidLoadOperation
     func chatViewControllerViewDidLoadOperation(){
+        
+        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillShow), name: .UIKeyboardWillShow, object: nil)
         
         //function call to scroll table view to bottom
         tableViewScrollToBottom(animated: false)
@@ -26,12 +29,13 @@ extension ChatViewController{
         txtViewChat.layoutIfNeeded()
         let height = txtViewChat.sizeThatFits(CGSize(width: txtViewChat.frame.size.width, height: CGFloat.greatestFiniteMagnitude)).height
         txtViewChat.contentSize.height = height
-        txtViewChat.layer.cornerRadius = 20
+        txtViewChat.layer.cornerRadius = txtViewChat.frame.height/2
         txtViewChat.layer.masksToBounds=true
         txtViewChat.layer.borderColor=UIColor.white.cgColor
         txtViewChat.layer.borderWidth=2
         UITextView.setAnimationsEnabled(false)
-        txtViewChat.contentInset = UIEdgeInsetsMake(2, 16, 2, -24);
+        //txtViewChat.contentInset = UIEdgeInsetsMake(2, 16, 2, 20)
+        txtViewChat.textContainerInset = UIEdgeInsets(top: 12, left: 20, bottom: 2, right: 20)
         UITextView.setAnimationsEnabled(true)
         
         imgProfilePicture.layer.cornerRadius = imgProfilePicture.frame.height/2
@@ -46,72 +50,104 @@ extension ChatViewController{
         btnSend.layer.masksToBounds=true
         btnSend.layer.borderColor=UIColor.white.cgColor
         
-        tableViewChat.register(UINib(nibName: "IncomingChatTableViewCell", bundle: nil), forCellReuseIdentifier: "incomingChatTableViewCell")
         
-        tableViewChat.register(UINib(nibName: "OutgoingChatTableViewCell", bundle: nil), forCellReuseIdentifier: "outgoingChatTableViewCell")
+        tableViewChat.register(UINib(nibName: "IncomingChatTableViewCell", bundle: Bundle.main), forCellReuseIdentifier: "IncomingChatTableViewCell")
+        tableViewChat.register(UINib(nibName: "OutgoingChatTableViewCell", bundle: Bundle.main), forCellReuseIdentifier: "OutgoingChatTableViewCell")
         
+        dataSourceIncoming()
         //sendMessageAPI()
-        pollingAPI()
+        startTimer()
         
+       
+    }
+    
+//    override func viewWillAppear(_ animated: Bool) {
+//        IQKeyboardManager.sharedManager().enable = false
+//    }
+//    
+//    override func viewWillDisappear(_ animated: Bool) {
+//         IQKeyboardManager.sharedManager().enable = true
+//    }
+    
+    func keyboardWillShow(notification: NSNotification) {
+        if let keyboardSize = (notification.userInfo?[UIKeyboardFrameBeginUserInfoKey] as? NSValue)?.cgRectValue {
+            keyboardHeight = keyboardSize.height
+            print(keyboardHeight ?? "keyboard height not found")
+        }
+    }
+    
+//    func textViewDidBeginEditing(_ textView: UITextView) {
+       // bottomConstraintTextView.constant = keyboardHeight ?? 0
+//    }
+//
+//    func textViewDidEndEditing(_ textView: UITextView) {
+//        bottomConstraintTextView.constant = 20
+//    }
+    
+    
+    
+    func dataSourceIncoming(){
+        dataSource =  TableViewDataSource(items: messages, height: UITableViewAutomaticDimension, tableView: tableViewChat, cellIdentifier: nil, configureCellBlock: { (cell, item, indexPath) in
+            //Cell for row at indexpath
+            
+            (cell as? IncomingChatTableViewCell)?.message = self.messages?[indexPath.row]
+            (cell as? OutgoingChatTableViewCell)?.message = self.messages?[indexPath.row]
+            
+        }, aRowSelectedListener: { (indexPath) in
+            //DidSelectRow at index path
+            
+        }, DidScrollListener: nil)
+        dataSource.isChat = true
+        tableViewChat.delegate = dataSource
+        tableViewChat.dataSource = dataSource
+        tableViewChat.reloadData()
     }
     
     func btnSendOperation() {
+    
+        //messages.append(/txtViewChat.text)
         
+        let message = Message(lastMessage: self.messages?.last, text: txtViewChat?.text)
+
+        self.messages?.append(message)
+        self.dataSource.items = self.messages
+        tableViewChat.beginUpdates()
+        tableViewChat.insertRows(at: [IndexPath(row: /messages?.count - 1, section: 0)], with: .right)
+        tableViewChat.endUpdates()
         tableViewScrollToBottom(animated: false)
-        
-        sentMessage.append(/txtViewChat.text)
-        
-        sentTime.append(/CurrentTime.shared.currentTime())
-        
         sendMessageAPI()
-        
-        tableViewChat.reloadData()
         txtViewChat.text = ""
         //idArray?.removeAll()
     }
     
     func sendMessageAPI(){
         ISMessages.hideAlert(animated: true)
-        
-        APIManager.shared.request(with: EndPoint.sendMessage(api_token: "43", timezone: /CurrentTime.shared.currentTime(), other_id: "45", chat_type: "1", message: /txtViewChat.text), completion: {[weak self] (response) in
-            self?.handleResponseSendMessageAPI(response: response)
+//        let message = Message(lastMessage: self.messages?.last, text: /txtViewChat.text)
+//        self.messages?.append(message)
+//        self.tableViewChat.reloadData()
+        APIManager.shared.request(with: EndPoint.sendMessage(api_token: "43", timezone: /CurrentTime.shared.currentTime(), other_id: "45", chat_type: "1", message: /txtViewChat.text), completion: { (response) in
         })
     }
     
-    func handleResponseSendMessageAPI(response : Response) {
-        switch response{
-            
-        case .success(let responseValue):
-            
-            guard let message = responseValue as? [Message] else {return}
-            Alerts.shared.show(alert: .success, message: "success", type: .success)
-            self.message = message
-            
-            //guard  let itemCount = sendMessage.dataSendMessage else {fatalError()}
-            
-            dataSource =  TableViewDataSource(items: message, height: UITableViewAutomaticDimension, tableView: tableViewChat, cellIdentifier: "outgoingChatTableViewCell", configureCellBlock: { (cell, item, indexPath) in
-                    //Cell for row at indexpath
-                
-                (cell as? OutgoingChatTableViewCell)?.message = message[indexPath.row]
-                
-                    }, aRowSelectedListener: { (indexPath) in
-                        //DidSelectRow at index path
-        
-                    }, DidScrollListener: nil)
-            tableViewChat.delegate = dataSource
-            tableViewChat.dataSource = dataSource
-            tableViewChat.reloadData()
-            
-            
-        case .failure(let str):
-            Alerts.shared.show(alert: .oops, message: /str.rawValue, type: .error)
+    
+    //MARK:- TIMER- pollingMethod
+    func startTimer(){
+        if check == false{
+            Utility.functions.startLoader()
         }
+        Timer.scheduledTimer(timeInterval: 3, target: self, selector: #selector(callPollingMethod), userInfo: nil, repeats: true)
+    }
+    
+    func callPollingMethod(){
+        pollingAPI()
     }
     
     func pollingAPI(){
+        //self.messages?.removeAll()
+        
         ISMessages.hideAlert(animated: true)
         
-        APIManager.shared.request(with: EndPoint.polling(api_token: "45", other_id: "43", timezone: Keys.timezone.rV, id: "700"), completion: {[weak self] (response) in
+        APIManager.shared.request(with: EndPoint.polling(api_token: "43", other_id: "45", timezone: Keys.timezone.rV, id: String(lastId)), completion: {[weak self] (response) in
             self?.handleResponsePollingAPI(response: response)
         })
     }
@@ -121,32 +157,38 @@ extension ChatViewController{
             
         case .success(let responseValue):
             
-            guard let polling = responseValue as? [Message] else {return}
-            Alerts.shared.show(alert: .success, message: "success", type: .success)
+            guard var polling = responseValue as? [Message],polling.count > 0 else { return }
+            if self.messages == nil {
+                self.messages = []
+            }
+            polling = polling.map({ msg in
+                let message = msg
+                message.other_id = "45"
+                return message
+            })
+            self.messages?.append(contentsOf: polling)
             
-            dataSource =  TableViewDataSource(items: polling, height: UITableViewAutomaticDimension, tableView: tableViewChat, cellIdentifier: "incomingChatTableViewCell", configureCellBlock: { (cell, item, indexPath) in
-                //Cell for row at indexpath
-                
-                (cell as? IncomingChatTableViewCell)?.lblIncomingText.text = self.sentMessage[indexPath.row].trimmingCharacters(in: CharacterSet.whitespacesAndNewlines)
-                (cell as? IncomingChatTableViewCell)?.lblIncomingTime.text = self.sentTime[indexPath.row]
-                
-            }, aRowSelectedListener: { (indexPath) in
-                //DidSelectRow at index path
-                
-                
-            }, DidScrollListener: nil)
-            tableViewChat.delegate = dataSource
-            tableViewChat.dataSource = dataSource
-            tableViewChat.reloadData()
+            lastId = /Int(/messages?[/messages?.count - 1].id)
             
+            dataSourceIncoming()
+            dataSource.items = self.messages
+            tableViewChat.deleteRows(at: [IndexPath(row: /messages?.count - 1, section: 0)], with: .fade)
+            tableViewChat.beginUpdates()
+            tableViewChat.insertRows(at: [IndexPath(row: /self.messages?.count - 1, section: 0)], with: .left)
+            tableViewChat.endUpdates()
+            tableViewScrollToBottom(animated: false)
+            //tableViewChat.reloadData()
+            
+            Utility.functions.removeLoader()
+            check = true
+           
+            //self.messages?.append(contentsOf: polling)
             
         case .failure(let str):
             Alerts.shared.show(alert: .oops, message: /str.rawValue, type: .error)
         }
     }
 
- 
-    
     //MARK:- VIEW DELEGATE- textViewDidBeginEditing
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         self.view.endEditing(true)

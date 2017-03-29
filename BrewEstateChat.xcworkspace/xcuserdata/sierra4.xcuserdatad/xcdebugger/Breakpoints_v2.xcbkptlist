@@ -10,11 +10,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "BrewEstateChat/Everything/CommonFunction/Extension/ChatViewControllerExtension.swift"
-            timestampString = "512045591.268978"
+            timestampString = "512403704.11132"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "124"
-            endingLineNumber = "124"
+            startingLineNumber = "176"
+            endingLineNumber = "176"
             landmarkName = "handleResponsePollingAPI(response:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -26,11 +26,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "BrewEstateChat/Everything/CommonFunction/Extension/ChatViewControllerExtension.swift"
-            timestampString = "512045591.268978"
+            timestampString = "512403704.11132"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "125"
-            endingLineNumber = "125"
+            startingLineNumber = "177"
+            endingLineNumber = "177"
             landmarkName = "handleResponsePollingAPI(response:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -41,13 +41,13 @@
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "BrewEstateChat/Everything/CommonFunction/Extension/DisplayUserViewControllerExtension.swift"
-            timestampString = "512041067.212309"
+            filePath = "BrewEstateChat/Everything/CommonFunction/Extension/ChatViewControllerExtension.swift"
+            timestampString = "512403704.11132"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "15"
-            endingLineNumber = "15"
-            landmarkName = "DisplayUserViewControllerViewDidLoadOperation()"
+            startingLineNumber = "178"
+            endingLineNumber = "178"
+            landmarkName = "handleResponsePollingAPI(response:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -57,13 +57,45 @@
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "BrewEstateChat/Everything/CommonFunction/Extension/DisplayUserViewControllerExtension.swift"
-            timestampString = "512041320.123766"
+            filePath = "BrewEstateChat/Everything/CommonFunction/Extension/ChatViewControllerExtension.swift"
+            timestampString = "512403704.11132"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "35"
-            endingLineNumber = "35"
-            landmarkName = "handleResponse(response:)"
+            startingLineNumber = "179"
+            endingLineNumber = "179"
+            landmarkName = "handleResponsePollingAPI(response:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "BrewEstateChat/Everything/CommonFunction/Extension/ChatViewControllerExtension.swift"
+            timestampString = "512403730.591289"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "175"
+            endingLineNumber = "175"
+            landmarkName = "handleResponsePollingAPI(response:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "BrewEstateChat/Everything/CommonFunction/Extension/ChatViewControllerExtension.swift"
+            timestampString = "512403732.207305"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "174"
+            endingLineNumber = "174"
+            landmarkName = "handleResponsePollingAPI(response:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

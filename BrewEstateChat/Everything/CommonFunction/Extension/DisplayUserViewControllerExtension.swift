@@ -43,19 +43,17 @@ extension DisplayUserViewController{
                 
             }, aRowSelectedListener: { (indexPath) in
                 //DidSelectRow at index path
-                
+                guard let cell = Bundle.main.loadNibNamed("DisplayUserTableViewCell", owner: self, options: nil)?.first as? DisplayUserTableViewCell else { return }
                 
                 guard let vc = ChatViewController.instantiate(fromStoryboard: "Main",id: "ChatViewController") else { return }
+                vc.image = cell.imgUserProfilePicture.image!
                 self.navigationController?.pushViewController(vc, animated: true)
-                
-               
-                
+ 
             }, DidScrollListener: nil)
             tableViewDisplayUser.delegate = dataSource
             tableViewDisplayUser.dataSource = dataSource
             tableViewDisplayUser.reloadData()
-            
-            
+  
         case .failure(let str):
             Alerts.shared.show(alert: .oops, message: /str.rawValue, type: .error)
         }

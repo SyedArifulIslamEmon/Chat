@@ -21,25 +21,21 @@ class OutgoingChatTableViewCell: UITableViewCell {
     var message : Message? {
         didSet{
             self.lblOutgoingText?.text = message?.message
-            self.lblOutgoingTime?.text = message?.timezone
+            self.lblOutgoingTime?.text = CurrentTime.shared.currentTime()
         }
     }
+    
     
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
+        viewOutgoing.layer.cornerRadius = 25
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
 
         // Configure the view for the selected state
-    }
-    
-    //autolayout function
-    override func draw(_ rect: CGRect) {
-        //function call for rounding corners
-        viewOutgoing.roundCorners(corners: [.topLeft, .bottomLeft, .bottomRight], radius: 20)
     }
     
 }

@@ -34,4 +34,11 @@ class Message: NSObject{
         id = .id => attributes
         video_thumbnail = .video_thumbnail => attributes
     }
+    
+    init(lastMessage : Message?,text: String?) {
+        chat_type = "1"
+        other_id = "43"
+        message = text
+        id = Int(lastMessage?.id ?? "")?.advanced(by: 1).description
+    }
 }

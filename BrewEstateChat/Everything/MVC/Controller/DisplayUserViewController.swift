@@ -16,6 +16,8 @@ class DisplayUserViewController: UIViewController{
     
     var dataSource = TableViewDataSource()
     
+    var image = UIImage()
+    
     var chats : [Chat]?{
         didSet{
             tableViewDisplayUser.reloadData()

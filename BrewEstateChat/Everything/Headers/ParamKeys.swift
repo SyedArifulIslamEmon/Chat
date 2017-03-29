@@ -13,7 +13,6 @@ enum ParamKeys : String {
     case email = "email"
     case images = "images"
     
-    case lng = "lng"
     case userId = "user_id"
     case name = "name"
     case apiToken = "api_token"

@@ -9,6 +9,7 @@
 import UIKit
 
 class ChatViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
+    @IBOutlet var bottomConstraintTextView: NSLayoutConstraint!
 
     @IBOutlet var lblUserName: UILabel!
     
@@ -17,34 +18,47 @@ class ChatViewController: UIViewController, UIImagePickerControllerDelegate, UIN
     @IBOutlet var viewOption: UIView!
     
     @IBOutlet var tableViewChat: UITableView!
-    
     @IBOutlet var txtViewChat: UITextView!
     
     @IBOutlet var btnSend: UIButton!
     @IBOutlet var btnSendImage: UIButton!
     
+    var check:Bool = false
+    
+    var keyboardHeight: CGFloat?
+    
     var sendImage:[UIImage]?
     var sendImageTemp:UIImage?
     
+    var lastId:Int = 850
+    
     var sentTime:[String] = []
-    var sentMessage:[String] = []
     
     var doubleTap:Bool = false
     
     var dataSource = TableViewDataSource()
     
-    var message : [Message]?{
+    var image = UIImage()
+    
+    var messages : [Message]?{
         didSet{
             tableViewChat.reloadData()
         }
     }
     
+//    override func loadView() {
+//        var scrollView = UIScrollView(frame: UIScreen.main.bounds)
+//        view = scrollView
+//        
+//    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        chatViewControllerViewDidLoadOperation()
-
-//        dataSource 
+        
+        imgProfilePicture.image = image
+        
+        chatViewControllerViewDidLoadOperation() 
     }
     
     @IBAction func btnSendOperation(_ sender: Any) {

@@ -28,6 +28,8 @@ class TableViewDataSource: NSObject  {
     var viewforHeaderInSection : ViewForHeaderInSection?
     var headerHeight : CGFloat?
     
+    var isChat = false
+    
     init (items : Array<AnyObject>? , height : CGFloat , tableView : UITableView? , cellIdentifier : String?  , configureCellBlock : ListCellConfigureBlock? , aRowSelectedListener : @escaping DidSelectedRow , DidScrollListener :  ScrollViewDidScroll?) {
         
         self.tableView = tableView
@@ -37,6 +39,9 @@ class TableViewDataSource: NSObject  {
         self.configureCellBlock = configureCellBlock
         self.aRowSelectedListener = aRowSelectedListener
         self.ScrollViewListener = DidScrollListener
+       
+       
+       
     }
     
     override init() {
@@ -48,12 +53,22 @@ extension TableViewDataSource : UITableViewDelegate , UITableViewDataSource{
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
-        guard let identifier = cellIdentifier else{
-            fatalError("Cell identifier not provided")
+//        guard let identifier = cellIdentifier else{
+//            fatalError("Cell identifier not provided")
+//        }
+        
+        let message = self.items?[indexPath.row] as? Message
+        if isChat {
+            if message?.other_id == "45" {
+                cellIdentifier = "IncomingChatTableViewCell"
+            }else {
+                cellIdentifier = "OutgoingChatTableViewCell"
+            }
         }
-        let cell: UITableViewCell = tableView.dequeueReusableCell(withIdentifier: identifier , for: indexPath) as UITableViewCell
+       
+        let cell: UITableViewCell = tableView.dequeueReusableCell(withIdentifier: cellIdentifier ?? "", for: indexPath) as UITableViewCell
         cell.selectionStyle = UITableViewCellSelectionStyle.none
-        if let block = self.configureCellBlock , let item: AnyObject = self.items?[(indexPath as NSIndexPath).row]{
+        if let block = self.configureCellBlock , let item: AnyObject = self.items?[indexPath.row]{
             block(cell , item , indexPath )
         }
         return cell
@@ -79,6 +94,7 @@ extension TableViewDataSource : UITableViewDelegate , UITableViewDataSource{
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return self.tableViewRowHeight
     }
+   
     
     func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
         guard let block = viewforHeaderInSection else { return nil }

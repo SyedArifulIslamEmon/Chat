@@ -19,13 +19,14 @@ class IncomingChatTableViewCell: UITableViewCell {
     var message : Message? {
         didSet{
             self.lblIncomingText?.text = message?.message
-            self.lblIncomingTime?.text = message?.timezone
+            self.lblIncomingTime?.text = CurrentTime.shared.currentTime()
         }
     }
     
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
+        viewIncoming.layer.cornerRadius = 25
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
@@ -35,9 +36,14 @@ class IncomingChatTableViewCell: UITableViewCell {
     }
     
     //autolayout function
-    override func draw(_ rect: CGRect) {
-        //function call for rounding corners
-        viewIncoming.roundCorners(corners: [.topRight, .bottomLeft, .bottomRight], radius: 20)
+//    override func draw(_ rect: CGRect) {
+//        //function call for rounding corners
+//        viewIncoming.roundCorners(corners: [.topRight, .bottomLeft, .bottomRight], radius: 20)
+//    }
+    
+    override func layoutSubviews() {
     }
+    
+    
     
 }

@@ -2,7 +2,7 @@
 //  ChatCD+CoreDataProperties.swift
 //  
 //
-//  Created by Sierra 4 on 24/03/17.
+//  Created by Sierra 4 on 27/03/17.
 //
 //  This file was automatically generated and should not be edited.
 //
@@ -22,9 +22,9 @@ extension ChatCD {
     @NSManaged public var id: Int32
     @NSManaged public var message: String?
     @NSManaged public var name: String?
-    @NSManaged public var receiverId: Int32
-    @NSManaged public var senderId: Int32
+    @NSManaged public var other_id: Int32
+    @NSManaged public var sender_id: Int32
     @NSManaged public var status: Int32
-    @NSManaged public var time: String?
+    @NSManaged public var timezone: String?
 
 }

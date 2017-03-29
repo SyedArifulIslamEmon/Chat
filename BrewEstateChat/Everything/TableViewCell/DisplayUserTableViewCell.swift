@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Kingfisher
 
 class DisplayUserTableViewCell: UITableViewCell {
     
@@ -18,10 +19,11 @@ class DisplayUserTableViewCell: UITableViewCell {
 
     var chat : Chat? {
         didSet{
-            
             self.lblUserName?.text = chat?.name
             self.lblLastMessage?.text = chat?.last_message
             self.lblLastMessageTime?.text = ""
+            let url = URL(string: APIConstants.basePathimages + /chat?.profile_pic)
+            self.imgUserProfilePicture?.kf.setImage(with: url)
         }
     }
     

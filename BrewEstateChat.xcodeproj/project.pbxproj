@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		1D0BA11F1E8501EB002E2FAD /* Chat.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D0BA11E1E8501EB002E2FAD /* Chat.swift */; };
 		1D0BA1231E8503E6002E2FAD /* Message.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D0BA1221E8503E6002E2FAD /* Message.swift */; };
+		1D4A689B1E8AA4B2000642ED /* Unwrap.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D4A689A1E8AA4B2000642ED /* Unwrap.swift */; };
 		1D54409B1E82A513004A21D2 /* BrewEstateChatTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D54409A1E82A513004A21D2 /* BrewEstateChatTests.swift */; };
 		1D5440A61E82A513004A21D2 /* BrewEstateChatUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D5440A51E82A513004A21D2 /* BrewEstateChatUITests.swift */; };
 		1D5440CA1E82A635004A21D2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D5440B61E82A635004A21D2 /* AppDelegate.swift */; };
@@ -63,6 +64,7 @@
 /* Begin PBXFileReference section */
 		1D0BA11E1E8501EB002E2FAD /* Chat.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Chat.swift; sourceTree = "<group>"; };
 		1D0BA1221E8503E6002E2FAD /* Message.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Message.swift; sourceTree = "<group>"; };
+		1D4A689A1E8AA4B2000642ED /* Unwrap.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Unwrap.swift; sourceTree = "<group>"; };
 		1D54407F1E82A513004A21D2 /* BrewEstateChat.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BrewEstateChat.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1D5440961E82A513004A21D2 /* BrewEstateChatTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BrewEstateChatTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		1D54409A1E82A513004A21D2 /* BrewEstateChatTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BrewEstateChatTests.swift; sourceTree = "<group>"; };
@@ -364,6 +366,7 @@
 			children = (
 				1D5AA13F1E83A931007263F4 /* Utility.swift */,
 				1D5AA1491E83EFAB007263F4 /* CurrentTime.swift */,
+				1D4A689A1E8AA4B2000642ED /* Unwrap.swift */,
 			);
 			path = Utility;
 			sourceTree = "<group>";
@@ -590,6 +593,7 @@
 				1D5440F81E82ABB2004A21D2 /* APIConstants.swift in Sources */,
 				1D0BA11F1E8501EB002E2FAD /* Chat.swift in Sources */,
 				1D5441071E82C683004A21D2 /* Extension.swift in Sources */,
+				1D4A689B1E8AA4B2000642ED /* Unwrap.swift in Sources */,
 				1D5441051E82B30E004A21D2 /* ParamKeys.swift in Sources */,
 				1D5440D11E82A684004A21D2 /* ChatViewController.swift in Sources */,
 				1D5440D31E82A7D6004A21D2 /* DisplayUserViewController.swift in Sources */,
